@@ -4,6 +4,16 @@ namespace Game
 {
     public class GameView : MonoBehaviour
     {
+        [SerializeField] private GameObject gameOverScreen;
 
+        public void ShowGameOver()
+        {
+            gameOverScreen.SetActive(true);
+        }
+
+        public void HideGameOver()
+        {
+            gameOverScreen.SetActive(false);
+        }
     }
 }
