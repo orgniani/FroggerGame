@@ -6,6 +6,11 @@ namespace Game
     {
         [SerializeField] private GameObject gameOverScreen;
 
+        private void Start()
+        {
+            HideGameOver();
+        }
+
         public void ShowGameOver()
         {
             gameOverScreen.SetActive(true);

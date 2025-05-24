@@ -15,16 +15,17 @@ namespace Player
             _startingY = transform.position.y;
         }
 
-        public void UpdatePosition(float newY)
+        public void UpdatePosition(float newX, float newY)
         {
             var pos = transform.position;
+            pos.x = newX;
             pos.y = newY;
             transform.position = pos;
         }
 
         public void ResetPosition()
         {
-            UpdatePosition(_startingY);
+            UpdatePosition(0, _startingY);
         }
 
         public void TriggerObstacleHit()

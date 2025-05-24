@@ -14,13 +14,18 @@ namespace Initializer
 
         private void Start()
         {
-
+            float startingX = 0;
             float startingY = playerView.transform.position.y;
-            float laneHeight = 1f;
-            float maxY = 2f;
 
+            //TODO: Replace hardcoded values!!!
+            float laneWidth = 1f;
+            float laneHeight = 1f;
+
+            float maxY = 5.5f;
+            float minX = -8.5f;
+            float maxX = 8.5f;
             var gameModel = new GameModel();
-            var playerModel = new PlayerModel(startingY, laneHeight, maxY);
+            var playerModel = new PlayerModel(startingX, startingY, laneWidth, laneHeight, maxY, minX, maxX);
 
             var gamePresenter = new GamePresenter(gameModel, gameView);
             var playerPresenter = new PlayerPresenter(playerModel, playerView, gamePresenter, inputManager);
