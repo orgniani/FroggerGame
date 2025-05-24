@@ -21,7 +21,7 @@ namespace Initializer
             float laneWidth = 1f;
             float laneHeight = 1f;
 
-            float maxY = 5.5f;
+            float maxY = 4.5f;
             float minX = -8.5f;
             float maxX = 8.5f;
             var gameModel = new GameModel();
