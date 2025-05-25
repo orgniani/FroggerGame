@@ -3,6 +3,7 @@ using Player;
 using Health;
 using Input;
 using Helpers;
+using Config;
 using UnityEngine;
 
 namespace Initializer
@@ -33,11 +34,11 @@ namespace Initializer
             var healthModel = new HealthModel(gameConfig.MaxLives);
             var playerModel = new PlayerModel(startingPosition, gameConfig);
 
-            var gamePresenter = new GamePresenter(gameModel, gameView);
             var healthPresenter = new HealthPresenter(healthModel, healthView);
 
             var inputThreshold = gameConfig.InputThreshold;
-            var playerPresenter = new PlayerPresenter(playerModel, playerView, healthModel, gamePresenter, inputManager, inputThreshold);
+            var playerPresenter = new PlayerPresenter(playerModel, playerView, healthModel, inputManager, inputThreshold);
+            var gamePresenter = new GamePresenter(gameModel, gameView, playerPresenter);
         }
 
         private void ValidateReferences()

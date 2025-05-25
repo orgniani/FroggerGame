@@ -1,7 +1,7 @@
 using UnityEngine;
-using Game;
 using Input;
 using Health;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -11,19 +11,18 @@ namespace Player
         private readonly PlayerView _view;
         private readonly HealthModel _healthModel;
 
-        //TODO: Shouldnt game need a reference to the player instead?
-        private readonly GamePresenter _game;
-
         private readonly InputManager _inputManager;
         private readonly PlayerInputHandler _inputHandler;
 
-        public PlayerPresenter(PlayerModel model, PlayerView view, HealthModel healthModel, GamePresenter game, InputManager inputManager, float inputThreshold)
+        private bool _isGameOver;
+        public UnityEvent OnGameOverTriggered = new UnityEvent();
+
+        public PlayerPresenter(PlayerModel model, PlayerView view, HealthModel healthModel, InputManager inputManager, float inputThreshold)
         {
             _model = model;
             _view = view;
             _healthModel = healthModel;
 
-            _game = game;
             _inputManager = inputManager;
 
             _inputHandler = new PlayerInputHandler(inputThreshold);
@@ -34,7 +33,7 @@ namespace Player
 
         private void HandleMoveInput(Vector2 moveInput)
         {
-            if (_game.IsGameOver) return;
+            if (_isGameOver) return;
 
             Vector2Int moveDir = _inputHandler.GetMoveDirection(moveInput);
 
@@ -48,13 +47,24 @@ namespace Player
             _view.UpdatePosition(_model.CurrentX, _model.CurrentY);
 
             if (_model.HasReachedGoal)
-                _game.TriggerGameOver();
+            {
+                OnGameOverTriggered?.Invoke();
+                _isGameOver = true;
+            }
         }
 
-        private void ResetPlayer()
+        private void ResetPlayerPosition()
         {
             _model.Reset();
             _view.ResetPosition();
+        }
+
+        public void ResetPlayer()
+        {
+            ResetPlayerPosition();
+            _healthModel.Reset();
+
+            _isGameOver = false;
         }
 
         private void HandleObstacleHit()
@@ -63,11 +73,12 @@ namespace Player
 
             if (_model.HasReachedGoal || _healthModel.IsDepleted)
             {
-                _game.TriggerGameOver();
+                OnGameOverTriggered?.Invoke();
+                _isGameOver = true;
                 return;
             }
 
-            ResetPlayer();
+            ResetPlayerPosition();
         }
     }
 }

@@ -6,7 +6,8 @@
         "Orgniani.Game.Runtime",
         "Orgniani.Player.Runtime",
         "Orgniani.Input.Runtime",
-        "Orgniani.Health.Runtime"
+        "Orgniani.Health.Runtime",
+        "Orgniani.Config.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

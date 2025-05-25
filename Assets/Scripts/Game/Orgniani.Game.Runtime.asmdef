@@ -2,7 +2,8 @@
     "name": "Orgniani.Game.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:7beb13a79847b974a94f036e3a291422"
+        "GUID:7beb13a79847b974a94f036e3a291422",
+        "GUID:90bdb5ac29b25b6408f267d34b522243"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

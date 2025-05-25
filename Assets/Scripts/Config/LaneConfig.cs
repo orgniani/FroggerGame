@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Lane
+namespace Config
 {
     [CreateAssetMenu(menuName = "Config/Lane", fileName = "LaneCfg", order = 0)]
     public class LaneConfig : ScriptableObject

@@ -3,8 +3,8 @@
     "rootNamespace": "",
     "references": [
         "Orgniani.Helpers.Runtime",
-        "Orgniani.Game.Runtime",
-        "Orgniani.Obstacle.Runtime"
+        "Orgniani.Obstacle.Runtime",
+        "Orgniani.Config.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

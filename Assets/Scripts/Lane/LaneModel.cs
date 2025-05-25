@@ -1,3 +1,5 @@
+using Config;
+
 namespace Lane
 {
     public class LaneModel
