@@ -152,6 +152,7 @@ MonoBehaviour:
   playerView: {fileID: 1302536672}
   healthView: {fileID: 2057685533}
   inputManager: {fileID: 1087949127}
+  gameConfig: {fileID: 11400000, guid: 5c63827110454ee459efda18bd514a78, type: 2}
 --- !u!4 &96455546
 Transform:
   m_ObjectHideFlags: 0
@@ -2693,10 +2694,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 018b9e57e8def0d478e84252f7171480, type: 2}
   - {fileID: 11400000, guid: 7104b231ecdeac24199b0b0e5f458e2c, type: 2}
   - {fileID: 11400000, guid: 0587725557fb4a84d8e9eccff6c607dd, type: 2}
-  numLanes: 6
-  laneHeight: 1
-  startX: -8
-  startY: -3
+  gameConfig: {fileID: 11400000, guid: 5c63827110454ee459efda18bd514a78, type: 2}
 --- !u!4 &914731955
 Transform:
   m_ObjectHideFlags: 0

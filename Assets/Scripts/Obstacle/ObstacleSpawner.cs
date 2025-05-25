@@ -1,5 +1,7 @@
+using Helpers;
 using System.Collections.Generic;
 using UnityEngine;
+using Game;
 
 namespace Obstacle
 {
@@ -8,22 +10,24 @@ namespace Obstacle
         [SerializeField] private ObstacleView obstaclePrefab;
         [SerializeField] private List<ObstacleConfig> obstacleConfigs;
 
-        //TODO: Should NOT set the number of lanes here!
-        [SerializeField] private int numLanes = 3;
-        [SerializeField] private float laneHeight = 1f;
-        [SerializeField] private float startX = -8f;
-        [SerializeField] private float startY = -2f;
+        [SerializeField] private GameConfig gameConfig;
 
         private List<ObstaclePresenter> _presenters = new();
 
+        private void Awake()
+        {
+            ValidateReferences();
+        }
         private void Start()
         {
-            for (int i = 0; i < numLanes; i++)
+            for (int i = 0; i < gameConfig.LaneAmount; i++)
             {
-                float spawnPositionY = startY + (i * laneHeight) + (laneHeight / 2f);
-                Vector3 spawnPos = new Vector3(startX, spawnPositionY, 0);
+                float spawnPositionY = gameConfig.BottomBoundary + (i * gameConfig.LaneHeight);
+                Vector3 spawnPos = new Vector3(gameConfig.LeftBoundary, spawnPositionY, 0);
 
                 ObstacleView view = Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
+                view.InitializeBounds(gameConfig.LeftBoundary, gameConfig.RightBoundary);
+
                 ObstacleModel model = new ObstacleModel();
 
                 ObstaclePresenter presenter = new ObstaclePresenter(model, view, obstacleConfigs);
@@ -36,6 +40,20 @@ namespace Obstacle
             foreach (var presenter in _presenters)
             {
                 presenter.Update();
+            }
+        }
+
+        private void ValidateReferences()
+        {
+            ReferenceValidator.Validate(obstaclePrefab, nameof(obstaclePrefab), this);
+            ReferenceValidator.Validate(gameConfig, nameof(gameConfig), this);
+
+            foreach (var config in obstacleConfigs)
+                ReferenceValidator.Validate(config.Sprite, nameof(config.Sprite), this);
+
+            if (obstacleConfigs.Count == 0)
+            {
+                Debug.LogError("Obstacle configs list is empty!", this);
             }
         }
     }

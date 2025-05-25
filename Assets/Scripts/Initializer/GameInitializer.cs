@@ -17,6 +17,9 @@ namespace Initializer
         [Header("Managers")]
         [SerializeField] private InputManager inputManager;
 
+        [Header("Configs")]
+        [SerializeField] private GameConfig gameConfig;
+
         private void Awake()
         {
             ValidateReferences();
@@ -24,26 +27,17 @@ namespace Initializer
 
         private void Start()
         {
-            float startingX = 0;
-            float startingY = playerView.transform.position.y;
-
-            //TODO: Replace hardcoded values!!!
-            float laneWidth = 1f;
-            float laneHeight = 1f;
-
-            float maxY = 4.5f;
-            float minX = -8.5f;
-            float maxX = 8.5f;
-
-            int maxLives = 3;
+            Vector3 startingPosition = playerView.transform.position;
 
             var gameModel = new GameModel();
-            var healthModel = new HealthModel(maxLives);
-            var playerModel = new PlayerModel(startingX, startingY, laneWidth, laneHeight, maxY, minX, maxX, healthModel);
+            var healthModel = new HealthModel(gameConfig.MaxLives);
+            var playerModel = new PlayerModel(startingPosition, gameConfig);
 
             var gamePresenter = new GamePresenter(gameModel, gameView);
             var healthPresenter = new HealthPresenter(healthModel, healthView);
-            var playerPresenter = new PlayerPresenter(playerModel, playerView, healthModel, gamePresenter, inputManager);
+
+            var inputThreshold = gameConfig.InputThreshold;
+            var playerPresenter = new PlayerPresenter(playerModel, playerView, healthModel, gamePresenter, inputManager, inputThreshold);
         }
 
         private void ValidateReferences()
@@ -52,6 +46,7 @@ namespace Initializer
             ReferenceValidator.Validate(playerView, nameof(playerView), this);
             ReferenceValidator.Validate(healthView, nameof(healthView), this);
             ReferenceValidator.Validate(inputManager, nameof(inputManager), this);
+            ReferenceValidator.Validate(gameConfig, nameof(gameConfig), this);
         }
     }
 }

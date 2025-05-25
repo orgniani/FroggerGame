@@ -2,7 +2,8 @@
     "name": "Orgniani.Obstacle.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:7beb13a79847b974a94f036e3a291422"
+        "GUID:7beb13a79847b974a94f036e3a291422",
+        "GUID:34e1c8f178710a543a6e478c435824eb"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

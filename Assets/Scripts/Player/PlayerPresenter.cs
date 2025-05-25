@@ -12,8 +12,9 @@ namespace Player
         private readonly HealthModel _healthModel;
         private readonly GamePresenter _game;
         private readonly InputManager _inputManager;
+        private readonly PlayerInputHandler _inputHandler;
 
-        public PlayerPresenter(PlayerModel model, PlayerView view, HealthModel healthModel, GamePresenter game, InputManager inputManager)
+        public PlayerPresenter(PlayerModel model, PlayerView view, HealthModel healthModel, GamePresenter game, InputManager inputManager, float inputThreshold)
         {
             _model = model;
             _view = view;
@@ -21,6 +22,8 @@ namespace Player
 
             _game = game;
             _inputManager = inputManager;
+
+            _inputHandler = new PlayerInputHandler(inputThreshold);
 
             _inputManager.OnMoveInput.AddListener(HandleMoveInput);
             _view.OnObstacleHit.AddListener(HandleObstacleHit);
@@ -30,22 +33,10 @@ namespace Player
         {
             if (_game.IsGameOver) return;
 
-            int yDir = 0;
-            int xDir = 0;
+            Vector2Int moveDir = _inputHandler.GetMoveDirection(moveInput);
 
-            //TODO: Replace hardcoded values!
-            if (moveInput.y > 0.5f)
-                yDir = 1;
-            else if (moveInput.y < -0.5f)
-                yDir = -1;
-
-            if (moveInput.x > 0.5f)
-                xDir = 1;
-            else if (moveInput.x < -0.5f)
-                xDir = -1;
-
-            if (xDir != 0 || yDir != 0)
-                Move(xDir, yDir);
+            if (moveDir != Vector2Int.zero)
+                Move(moveDir.x, moveDir.y);
         }
 
         private void Move(int xDir, int yDir)
@@ -63,19 +54,17 @@ namespace Player
             _view.ResetPosition();
         }
 
-
         private void HandleObstacleHit()
         {
             _healthModel.TakeDamage(1);
 
-            if (_model.IsGameOver)
+            if (_model.HasReachedGoal || _healthModel.IsDepleted)
             {
                 _game.TriggerGameOver();
                 return;
             }
 
-            _model.Reset();
-            _view.ResetPosition();
+            ResetPlayer();
         }
     }
 }

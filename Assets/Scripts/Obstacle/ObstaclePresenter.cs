@@ -25,7 +25,6 @@ namespace Obstacle
             _view.Move(_model.Speed);
         }
 
-        //TODO: Move this to spawner?
         private void AssignRandomConfig()
         {
             var config = _configs[Random.Range(0, _configs.Count)];

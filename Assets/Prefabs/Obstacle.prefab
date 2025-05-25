@@ -175,8 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9e7cb43d476ff4ca0da8846142aa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftBound: -10
-  rightBound: 10
+  margin: 2
   OnRecycled:
     m_PersistentCalls:
       m_Calls: []

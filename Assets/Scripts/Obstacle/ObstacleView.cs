@@ -6,8 +6,10 @@ namespace Obstacle
     [RequireComponent(typeof(SpriteRenderer))]
     public class ObstacleView : MonoBehaviour
     {
-        [SerializeField] private float leftBound = -10f;
-        [SerializeField] private float rightBound = 10f;
+        [SerializeField] private float margin = 1f;
+
+        private float _leftBound;
+        private float _rightBound;
 
         private SpriteRenderer _spriteRenderer;
         public UnityEvent OnRecycled;
@@ -17,14 +19,20 @@ namespace Obstacle
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
+        public void InitializeBounds(float left, float right)
+        {
+            _leftBound = left - margin;
+            _rightBound = right + margin;
+        }
+
         public void Move(float speed)
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-            if (transform.position.x > rightBound)
+            if (transform.position.x > _rightBound)
             {
                 var pos = transform.position;
-                pos.x = leftBound;
+                pos.x = _leftBound;
                 transform.position = pos;
 
                 OnRecycled?.Invoke();

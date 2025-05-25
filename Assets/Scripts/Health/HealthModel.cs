@@ -31,5 +31,4 @@ namespace Health
             OnLivesChanged?.Invoke(CurrentLives);
         }
     }
-
 }

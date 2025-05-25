@@ -2,8 +2,10 @@ namespace Game
 {
     public class GamePresenter
     {
-        private GameModel _model;
-        private GameView _view;
+        private readonly GameModel _model;
+        private readonly GameView _view;
+
+        public bool IsGameOver => _model.IsGameOver;
 
         public GamePresenter(GameModel model, GameView view)
         {
@@ -24,7 +26,5 @@ namespace Game
             _model.ResetGame();
             _view.HideGameOver();
         }
-
-        public bool IsGameOver => _model.IsGameOver;
     }
 }

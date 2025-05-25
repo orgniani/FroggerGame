@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using Helpers;
 
 namespace Input
 {
@@ -12,6 +13,11 @@ namespace Input
 
         private InputAction _moveAction;
         public UnityEvent<Vector2> OnMoveInput = new UnityEvent<Vector2>();
+
+        private void Awake()
+        {
+            ReferenceValidator.Validate(inputActions, nameof(inputActions), this);
+        }
 
         private void OnEnable()
         {
