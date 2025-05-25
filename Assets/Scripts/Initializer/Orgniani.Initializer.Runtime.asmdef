@@ -2,9 +2,11 @@
     "name": "Orgniani.Initializer.Runtime",
     "rootNamespace": "",
     "references": [
+        "Orgniani.Helpers.Runtime",
         "Orgniani.Game.Runtime",
         "Orgniani.Player.Runtime",
-        "Orgniani.Input.Runtime"
+        "Orgniani.Input.Runtime",
+        "Orgniani.Health.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

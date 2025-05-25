@@ -1,4 +1,5 @@
 using UnityEngine;
+using Health;
 
 namespace Player
 {
@@ -12,12 +13,17 @@ namespace Player
         private readonly float _laneHeight;
         private readonly float _laneWidth;
 
+        private HealthModel _healthModel;
+
         public float MaxY { get; }
         public float MinX { get; }
         public float MaxX { get; }
 
-        //TODO: Too many parameters needed
-        public PlayerModel(float startingX, float startingY, float laneWidth, float laneHeight, float maxY, float minX, float maxX)
+        public bool HasReachedGoal => Mathf.Approximately(CurrentY, MaxY);
+        public bool IsGameOver => _healthModel.IsDepleted || HasReachedGoal;
+
+        //TODO: needs too many parameters
+        public PlayerModel(float startingX, float startingY, float laneWidth, float laneHeight, float maxY, float minX, float maxX, HealthModel healthModel)
         {
             _startingX = startingX;
             _startingY = startingY;
@@ -30,6 +36,8 @@ namespace Player
 
             CurrentX = startingX;
             CurrentY = startingY;
+
+            _healthModel = healthModel;
         }
 
         public void Move(int xDir, int yDir)
@@ -46,7 +54,5 @@ namespace Player
             CurrentX = _startingX;
             CurrentY = _startingY;
         }
-
-        public bool HasReachedGoal => Mathf.Approximately(CurrentY, MaxY);
     }
 }

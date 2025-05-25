@@ -1,3 +1,16 @@
 {
-	"name": "Orgniani.Health.Runtime"
+    "name": "Orgniani.Health.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7beb13a79847b974a94f036e3a291422"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

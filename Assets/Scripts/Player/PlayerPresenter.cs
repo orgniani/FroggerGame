@@ -1,6 +1,7 @@
 using UnityEngine;
 using Game;
 using Input;
+using Health;
 
 namespace Player
 {
@@ -8,18 +9,21 @@ namespace Player
     {
         private readonly PlayerModel _model;
         private readonly PlayerView _view;
+        private readonly HealthModel _healthModel;
         private readonly GamePresenter _game;
         private readonly InputManager _inputManager;
 
-        public PlayerPresenter(PlayerModel model, PlayerView view, GamePresenter game, InputManager inputManager)
+        public PlayerPresenter(PlayerModel model, PlayerView view, HealthModel healthModel, GamePresenter game, InputManager inputManager)
         {
             _model = model;
             _view = view;
+            _healthModel = healthModel;
+
             _game = game;
             _inputManager = inputManager;
 
             _inputManager.OnMoveInput.AddListener(HandleMoveInput);
-            _view.OnObstacleHit.AddListener(ResetPlayer);
+            _view.OnObstacleHit.AddListener(HandleObstacleHit);
         }
 
         private void HandleMoveInput(Vector2 moveInput)
@@ -55,6 +59,21 @@ namespace Player
 
         private void ResetPlayer()
         {
+            _model.Reset();
+            _view.ResetPosition();
+        }
+
+
+        private void HandleObstacleHit()
+        {
+            _healthModel.TakeDamage(1);
+
+            if (_model.IsGameOver)
+            {
+                _game.TriggerGameOver();
+                return;
+            }
+
             _model.Reset();
             _view.ResetPosition();
         }

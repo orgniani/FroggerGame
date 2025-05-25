@@ -1,3 +1,4 @@
+using Helpers;
 using UnityEngine;
 
 namespace Game
@@ -5,6 +6,11 @@ namespace Game
     public class GameView : MonoBehaviour
     {
         [SerializeField] private GameObject gameOverScreen;
+
+        private void Awake()
+        {
+            ReferenceValidator.Validate(gameOverScreen, nameof(gameOverScreen), this);
+        }
 
         private void Start()
         {
