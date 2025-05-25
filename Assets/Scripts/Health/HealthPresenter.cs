@@ -13,7 +13,7 @@ namespace Health
             _view.Setup(_model.MaxLives);
             _view.UpdateHearts(_model.CurrentLives);
 
-            _model.OnLivesChanged += _view.UpdateHearts;
+            _model.OnLivesChanged?.AddListener(_view.UpdateHearts);
         }
     }
 }

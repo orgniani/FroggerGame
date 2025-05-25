@@ -1,35 +1,31 @@
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Obstacle
 {
     public class ObstaclePresenter
     {
         private readonly ObstacleModel _model;
         private readonly ObstacleView _view;
-        private readonly List<ObstacleConfig> _configs;
 
-        public ObstaclePresenter(ObstacleModel model, ObstacleView view, List<ObstacleConfig> configs)
+        public ObstaclePresenter(ObstacleModel model, ObstacleView view)
         {
             _model = model;
             _view = view;
-            _configs = configs;
-
-            AssignRandomConfig();
-
-            _view.OnRecycled.AddListener(AssignRandomConfig);
         }
 
-        public void Update()
+        public void Update(float deltaTime)
         {
-            _view.Move(_model.Speed);
+            _model.UpdatePosition(deltaTime);
+            _view.SetXPosition(_model.CurrentX);
         }
 
-        private void AssignRandomConfig()
+        public void Reset(float newX)
         {
-            var config = _configs[Random.Range(0, _configs.Count)];
-            _model.ApplyConfig(config);
-            _view.SetSprite(config.Sprite);
+            _model.SetPosition(newX);
+            _view.SetXPosition(newX);
+        }
+
+        public float GetCurrentX()
+        {
+            return _model.CurrentX;
         }
     }
 }

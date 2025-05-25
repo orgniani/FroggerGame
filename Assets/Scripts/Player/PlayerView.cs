@@ -7,8 +7,8 @@ namespace Player
     {
         [SerializeField] private LayerMask obstacleLayerMask;
 
-        public UnityEvent<int> OnLaneChange;
-        public UnityEvent OnObstacleHit;
+        public UnityEvent<int> OnLaneChange = new UnityEvent<int>();
+        public UnityEvent OnObstacleHit = new UnityEvent();
 
         private float _startingY;
 

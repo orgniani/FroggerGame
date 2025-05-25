@@ -24,7 +24,6 @@ namespace Health
         {
             _hearts.Clear();
 
-            // Instantiate hearts
             for (int i = 0; i < maxLives; i++)
             {
                 Image heart = Instantiate(heartPrefab, heartParent);

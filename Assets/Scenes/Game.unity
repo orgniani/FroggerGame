@@ -2669,32 +2669,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 914731955}
-  - component: {fileID: 914731954}
+  - component: {fileID: 914731956}
   m_Layer: 0
-  m_Name: ObstacleSpawner
+  m_Name: LaneSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &914731954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914731953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2aaf83ef3d474044a916182a201532f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 4503060129401681542, guid: b41b728a430c3834094183f0f07675bd, type: 3}
-  obstacleConfigs:
-  - {fileID: 11400000, guid: 018b9e57e8def0d478e84252f7171480, type: 2}
-  - {fileID: 11400000, guid: 7104b231ecdeac24199b0b0e5f458e2c, type: 2}
-  - {fileID: 11400000, guid: 0587725557fb4a84d8e9eccff6c607dd, type: 2}
-  gameConfig: {fileID: 11400000, guid: 5c63827110454ee459efda18bd514a78, type: 2}
 --- !u!4 &914731955
 Transform:
   m_ObjectHideFlags: 0
@@ -2710,6 +2692,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &914731956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914731953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12887817bcf10e40a7ee5e7a238ce5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lanePrefab: {fileID: 960088735676999779, guid: 4b962a7eac625264ebad33d96d213f2c, type: 3}
+  laneConfigs:
+  - {fileID: 11400000, guid: 018b9e57e8def0d478e84252f7171480, type: 2}
+  - {fileID: 11400000, guid: 7104b231ecdeac24199b0b0e5f458e2c, type: 2}
+  - {fileID: 11400000, guid: 0587725557fb4a84d8e9eccff6c607dd, type: 2}
+  - {fileID: 11400000, guid: 018b9e57e8def0d478e84252f7171480, type: 2}
+  - {fileID: 11400000, guid: 7104b231ecdeac24199b0b0e5f458e2c, type: 2}
+  - {fileID: 11400000, guid: 0587725557fb4a84d8e9eccff6c607dd, type: 2}
+  gameConfig: {fileID: 11400000, guid: 5c63827110454ee459efda18bd514a78, type: 2}
 --- !u!1 &1087949124
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.5, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1843197933104017171, guid: a21da1882fc9324409f8b66fdb1d6a16, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4147898238804275850, guid: 0c14eaae9f7658445a9ab73638e16743, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -128,13 +128,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 0.9375, y: 0.625}
     newSize: {x: 3.79, y: 3.79}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 1
-  m_Size: {x: 5.88, y: 5.88}
+  m_Size: {x: 0.95, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &1995906682136326228
 Rigidbody2D:
@@ -175,7 +175,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9e7cb43d476ff4ca0da8846142aa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  margin: 2
-  OnRecycled:
-    m_PersistentCalls:
-      m_Calls: []
+  width: 4

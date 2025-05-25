@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Health
 {
@@ -8,7 +9,7 @@ namespace Health
         public int MaxLives { get; }
         public int CurrentLives { get; private set; }
 
-        public event Action<int> OnLivesChanged;
+        public UnityEvent<int> OnLivesChanged = new UnityEvent<int>();
 
         public bool IsDepleted => CurrentLives <= 0;
 

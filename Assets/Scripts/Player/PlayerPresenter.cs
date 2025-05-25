@@ -10,7 +10,10 @@ namespace Player
         private readonly PlayerModel _model;
         private readonly PlayerView _view;
         private readonly HealthModel _healthModel;
+
+        //TODO: Shouldnt game need a reference to the player instead?
         private readonly GamePresenter _game;
+
         private readonly InputManager _inputManager;
         private readonly PlayerInputHandler _inputHandler;
 
@@ -25,8 +28,8 @@ namespace Player
 
             _inputHandler = new PlayerInputHandler(inputThreshold);
 
-            _inputManager.OnMoveInput.AddListener(HandleMoveInput);
-            _view.OnObstacleHit.AddListener(HandleObstacleHit);
+            _inputManager.OnMoveInput?.AddListener(HandleMoveInput);
+            _view.OnObstacleHit?.AddListener(HandleObstacleHit);
         }
 
         private void HandleMoveInput(Vector2 moveInput)

@@ -43,7 +43,7 @@ namespace Input
         private void HandleMovementInput(InputAction.CallbackContext ctx)
         {
             Vector2 movementInput = ctx.ReadValue<Vector2>();
-            OnMoveInput.Invoke(movementInput);
+            OnMoveInput?.Invoke(movementInput);
         }
     }
 }

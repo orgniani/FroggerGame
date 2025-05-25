@@ -1,0 +1,1015 @@
+fileFormatVersion: 2
+guid: 0c14eaae9f7658445a9ab73638e16743
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8506611302418511578
+    second: CityBuilder_0
+  - first:
+      213: -1193188222703735721
+    second: CityBuilder_1
+  - first:
+      213: 7318379926456737842
+    second: CityBuilder_2
+  - first:
+      213: 6188576023538201903
+    second: CityBuilder_3
+  - first:
+      213: -2520734995584977121
+    second: CityBuilder_4
+  - first:
+      213: 7424371926328699890
+    second: CityBuilder_5
+  - first:
+      213: 2098052671711858956
+    second: CityBuilder_6
+  - first:
+      213: 4831134395808924020
+    second: CityBuilder_7
+  - first:
+      213: -3471517847963340057
+    second: CityBuilder_8
+  - first:
+      213: -2339971902535954881
+    second: CityBuilder_9
+  - first:
+      213: 3025335688616248585
+    second: CityBuilder_10
+  - first:
+      213: -3199289523281432154
+    second: CityBuilder_11
+  - first:
+      213: 2845581674862504723
+    second: CityBuilder_12
+  - first:
+      213: 8543360372527965568
+    second: CityBuilder_13
+  - first:
+      213: 5878790139055710620
+    second: CityBuilder_14
+  - first:
+      213: 1077674424792035455
+    second: CityBuilder_15
+  - first:
+      213: 4674616655829206268
+    second: CityBuilder_16
+  - first:
+      213: -3015573160413072019
+    second: CityBuilder_17
+  - first:
+      213: -8795234928983971343
+    second: CityBuilder_18
+  - first:
+      213: -8224646121576405770
+    second: CityBuilder_19
+  - first:
+      213: 77610061884475773
+    second: CityBuilder_20
+  - first:
+      213: 5901696149243542014
+    second: CityBuilder_21
+  - first:
+      213: -6863131519678958133
+    second: CityBuilder_22
+  - first:
+      213: 4958802223797830327
+    second: CityBuilder_23
+  - first:
+      213: -5241925772115695032
+    second: CityBuilder_24
+  - first:
+      213: -7060425922920641782
+    second: CityBuilder_25
+  - first:
+      213: -7218030485325429935
+    second: CityBuilder_26
+  - first:
+      213: 8022860041427305205
+    second: CityBuilder_27
+  - first:
+      213: 7690577724851429209
+    second: CityBuilder_28
+  - first:
+      213: 1250773579362482350
+    second: CityBuilder_29
+  - first:
+      213: -1990518642568032319
+    second: CityBuilder_30
+  - first:
+      213: 4319844891851810930
+    second: CityBuilder_31
+  - first:
+      213: -9198126140893311188
+    second: CityBuilder_32
+  - first:
+      213: 1840188561897504412
+    second: CityBuilder_33
+  - first:
+      213: -2920887038921762309
+    second: CityBuilder_34
+  - first:
+      213: -7903095282039799063
+    second: CityBuilder_35
+  - first:
+      213: 1725528544920045058
+    second: CityBuilder_36
+  - first:
+      213: -7639697415393920481
+    second: CityBuilder_37
+  - first:
+      213: 5989978731227104055
+    second: CityBuilder_38
+  - first:
+      213: 7463974001259259311
+    second: CityBuilder_39
+  - first:
+      213: -5107199585306021841
+    second: CityBuilder_40
+  - first:
+      213: 1563997024797795244
+    second: CityBuilder_41
+  - first:
+      213: 7361645483862904803
+    second: CityBuilder_42
+  - first:
+      213: 248513191477679122
+    second: CityBuilder_43
+  - first:
+      213: -3057229514699590207
+    second: CityBuilder_44
+  - first:
+      213: -3285908515667152830
+    second: CityBuilder_45
+  - first:
+      213: -1664567887636130760
+    second: CityBuilder_46
+  - first:
+      213: 3098496449674088633
+    second: CityBuilder_47
+  - first:
+      213: -5996603656936739240
+    second: CityBuilder_48
+  - first:
+      213: 3943247765570270980
+    second: CityBuilder_49
+  - first:
+      213: 1781309554114154727
+    second: CityBuilder_50
+  - first:
+      213: -761341263831185106
+    second: CityBuilder_51
+  - first:
+      213: 7806137772243366872
+    second: CityBuilder_52
+  - first:
+      213: 5705231505610529962
+    second: CityBuilder_53
+  - first:
+      213: 4806339452646033651
+    second: CityBuilder_54
+  - first:
+      213: -531214824019997732
+    second: CityBuilder_55
+  - first:
+      213: 4918731634763670597
+    second: CityBuilder_56
+  - first:
+      213: 4267854744207906259
+    second: CityBuilder_57
+  - first:
+      213: -3333860265712551742
+    second: CityBuilder_58
+  - first:
+      213: 6059077994941900265
+    second: CityBuilder_59
+  - first:
+      213: 8106846666922001648
+    second: CityBuilder_60
+  - first:
+      213: 5469158020443254732
+    second: CityBuilder_61
+  - first:
+      213: -5178862591867086578
+    second: CityBuilder_62
+  - first:
+      213: 5083588724522478828
+    second: CityBuilder_63
+  - first:
+      213: -6888918202243368790
+    second: CityBuilder_64
+  - first:
+      213: 3407067735465615674
+    second: CityBuilder_65
+  - first:
+      213: 7262974987949059337
+    second: CityBuilder_66
+  - first:
+      213: -8116521872699393343
+    second: CityBuilder_67
+  - first:
+      213: 4147898238804275850
+    second: CityBuilder_68
+  - first:
+      213: -5568850845072404594
+    second: CityBuilder_69
+  - first:
+      213: -6473323247993137732
+    second: CityBuilder_70
+  - first:
+      213: -3636526259551820160
+    second: CityBuilder_71
+  - first:
+      213: -5658571470401236626
+    second: CityBuilder_72
+  - first:
+      213: 1218253124602752078
+    second: CityBuilder_73
+  - first:
+      213: 6755413375275601650
+    second: CityBuilder_74
+  - first:
+      213: -2648248354551470648
+    second: CityBuilder_75
+  - first:
+      213: -6836086346501831183
+    second: CityBuilder_76
+  - first:
+      213: -5107893663397930141
+    second: CityBuilder_77
+  - first:
+      213: -203316959380246946
+    second: CityBuilder_78
+  - first:
+      213: -8074445634759834414
+    second: CityBuilder_79
+  - first:
+      213: -3575134210446041974
+    second: CityBuilder_80
+  - first:
+      213: -2411592437560071557
+    second: CityBuilder_81
+  - first:
+      213: 1497054484153238943
+    second: CityBuilder_82
+  - first:
+      213: 8538239489634456415
+    second: CityBuilder_83
+  - first:
+      213: -8731450148665263681
+    second: CityBuilder_84
+  - first:
+      213: -5922613486596633463
+    second: CityBuilder_85
+  - first:
+      213: 2431266781912650359
+    second: CityBuilder_86
+  - first:
+      213: -8875406966282365271
+    second: CityBuilder_87
+  - first:
+      213: 4186339628199282126
+    second: CityBuilder_88
+  - first:
+      213: -7776049156299996730
+    second: CityBuilder_89
+  - first:
+      213: -5438940503956848393
+    second: CityBuilder_90
+  - first:
+      213: -3074548139898490720
+    second: CityBuilder_91
+  - first:
+      213: 4238434080571605401
+    second: CityBuilder_92
+  - first:
+      213: 546289047700540642
+    second: CityBuilder_93
+  - first:
+      213: 7770017167573904074
+    second: CityBuilder_94
+  - first:
+      213: 1176435800583408801
+    second: CityBuilder_95
+  - first:
+      213: 8079809098343652111
+    second: CityBuilder_96
+  - first:
+      213: 4583782245880621701
+    second: CityBuilder_97
+  - first:
+      213: -8258462645822173929
+    second: CityBuilder_98
+  - first:
+      213: 8460454170780023064
+    second: CityBuilder_99
+  - first:
+      213: 4783394919853962993
+    second: CityBuilder_100
+  - first:
+      213: -3790180475887963825
+    second: CityBuilder_101
+  - first:
+      213: -7514855474929904071
+    second: CityBuilder_102
+  - first:
+      213: -4522121960568200948
+    second: CityBuilder_103
+  - first:
+      213: 5180907710762935108
+    second: CityBuilder_104
+  - first:
+      213: 949262872075111519
+    second: CityBuilder_105
+  - first:
+      213: 2744635301868438725
+    second: CityBuilder_106
+  - first:
+      213: 7789863442541290211
+    second: CityBuilder_107
+  - first:
+      213: 8451650821023603990
+    second: CityBuilder_108
+  - first:
+      213: 8341556631657714998
+    second: CityBuilder_109
+  - first:
+      213: -7887318069303643136
+    second: CityBuilder_110
+  - first:
+      213: 5132382894459327244
+    second: CityBuilder_111
+  - first:
+      213: 6937793796834674568
+    second: CityBuilder_112
+  - first:
+      213: -2426092400436744482
+    second: CityBuilder_113
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CityBuilder_56
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 192
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544a09b7c58d24440800000000000000
+      internalID: 4918731634763670597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_65
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 118
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a316f12dd06584f20800000000000000
+      internalID: 3407067735465615674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_68
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 118
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a82b560c87b409930800000000000000
+      internalID: 4147898238804275850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_70
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 118
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb557179dc22a26a0800000000000000
+      internalID: -6473323247993137732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_73
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 118
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ce47223ca18e010800000000000000
+      internalID: 1218253124602752078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_75
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 118
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c562fd07288f3bd0800000000000000
+      internalID: -2648248354551470648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_98
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 81
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71dcfe49afb046d80800000000000000
+      internalID: -8258462645822173929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_99
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 81
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819b0df2e32996570800000000000000
+      internalID: 8460454170780023064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_100
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 81
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6bd4a0658026240800000000000000
+      internalID: 4783394919853962993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_101
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 81
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41b31c30f2966bc0800000000000000
+      internalID: -3790180475887963825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_102
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 81
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936576ec2ced5b790800000000000000
+      internalID: -7514855474929904071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_105
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 64
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c01808d857c2d00800000000000000
+      internalID: 949262872075111519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_106
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 64
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c48ddde347e61620800000000000000
+      internalID: 2744635301868438725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_107
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 64
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2a97d47872b1c60800000000000000
+      internalID: 7789863442541290211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_108
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 64
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d10c894ab4a4570800000000000000
+      internalID: 8451650821023603990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_109
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 64
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63513cf9f8923c370800000000000000
+      internalID: 8341556631657714998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_111
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 49
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c031a8bcc03e93740800000000000000
+      internalID: 5132382894459327244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_112
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 36
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8874d3143bef74060800000000000000
+      internalID: 6937793796834674568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794f51d3deee9254fbffe5d177c3e23d
+      internalID: 8506611302418511578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityBuilder_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5903a0f0f1b5e6e4db3034977d395662
+      internalID: -1193188222703735721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: db4984d3bfa64f24e9edd4a337345f6d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CityBuilder_0: 8506611302418511578
+      CityBuilder_1: -1193188222703735721
+      CityBuilder_10: 3025335688616248585
+      CityBuilder_100: 4783394919853962993
+      CityBuilder_101: -3790180475887963825
+      CityBuilder_102: -7514855474929904071
+      CityBuilder_103: -4522121960568200948
+      CityBuilder_104: 5180907710762935108
+      CityBuilder_105: 949262872075111519
+      CityBuilder_106: 2744635301868438725
+      CityBuilder_107: 7789863442541290211
+      CityBuilder_108: 8451650821023603990
+      CityBuilder_109: 8341556631657714998
+      CityBuilder_11: -3199289523281432154
+      CityBuilder_110: -7887318069303643136
+      CityBuilder_111: 5132382894459327244
+      CityBuilder_112: 6937793796834674568
+      CityBuilder_113: -2426092400436744482
+      CityBuilder_114: -714917827
+      CityBuilder_115: -2057942407
+      CityBuilder_12: 2845581674862504723
+      CityBuilder_13: 8543360372527965568
+      CityBuilder_14: 5878790139055710620
+      CityBuilder_15: 1077674424792035455
+      CityBuilder_16: 4674616655829206268
+      CityBuilder_17: -3015573160413072019
+      CityBuilder_18: -8795234928983971343
+      CityBuilder_19: -8224646121576405770
+      CityBuilder_2: 7318379926456737842
+      CityBuilder_20: 77610061884475773
+      CityBuilder_21: 5901696149243542014
+      CityBuilder_22: -6863131519678958133
+      CityBuilder_23: 4958802223797830327
+      CityBuilder_24: -5241925772115695032
+      CityBuilder_25: -7060425922920641782
+      CityBuilder_26: -7218030485325429935
+      CityBuilder_27: 8022860041427305205
+      CityBuilder_28: 7690577724851429209
+      CityBuilder_29: 1250773579362482350
+      CityBuilder_3: 6188576023538201903
+      CityBuilder_30: -1990518642568032319
+      CityBuilder_31: 4319844891851810930
+      CityBuilder_32: -9198126140893311188
+      CityBuilder_33: 1840188561897504412
+      CityBuilder_34: -2920887038921762309
+      CityBuilder_35: -7903095282039799063
+      CityBuilder_36: 1725528544920045058
+      CityBuilder_37: -7639697415393920481
+      CityBuilder_38: 5989978731227104055
+      CityBuilder_39: 7463974001259259311
+      CityBuilder_4: -2520734995584977121
+      CityBuilder_40: -5107199585306021841
+      CityBuilder_41: 1563997024797795244
+      CityBuilder_42: 7361645483862904803
+      CityBuilder_43: 248513191477679122
+      CityBuilder_44: -3057229514699590207
+      CityBuilder_45: -3285908515667152830
+      CityBuilder_46: -1664567887636130760
+      CityBuilder_47: 3098496449674088633
+      CityBuilder_48: -5996603656936739240
+      CityBuilder_49: 3943247765570270980
+      CityBuilder_5: 7424371926328699890
+      CityBuilder_50: 1781309554114154727
+      CityBuilder_51: -761341263831185106
+      CityBuilder_52: 7806137772243366872
+      CityBuilder_53: 5705231505610529962
+      CityBuilder_54: 4806339452646033651
+      CityBuilder_55: -531214824019997732
+      CityBuilder_56: 4918731634763670597
+      CityBuilder_57: 4267854744207906259
+      CityBuilder_58: -3333860265712551742
+      CityBuilder_59: 6059077994941900265
+      CityBuilder_6: 2098052671711858956
+      CityBuilder_60: 8106846666922001648
+      CityBuilder_61: 5469158020443254732
+      CityBuilder_62: -5178862591867086578
+      CityBuilder_63: 5083588724522478828
+      CityBuilder_64: -6888918202243368790
+      CityBuilder_65: 3407067735465615674
+      CityBuilder_66: 7262974987949059337
+      CityBuilder_67: -8116521872699393343
+      CityBuilder_68: 4147898238804275850
+      CityBuilder_69: -5568850845072404594
+      CityBuilder_7: 4831134395808924020
+      CityBuilder_70: -6473323247993137732
+      CityBuilder_71: -3636526259551820160
+      CityBuilder_72: -5658571470401236626
+      CityBuilder_73: 1218253124602752078
+      CityBuilder_74: 6755413375275601650
+      CityBuilder_75: -2648248354551470648
+      CityBuilder_76: -6836086346501831183
+      CityBuilder_77: -5107893663397930141
+      CityBuilder_78: -203316959380246946
+      CityBuilder_79: -8074445634759834414
+      CityBuilder_8: -3471517847963340057
+      CityBuilder_80: -3575134210446041974
+      CityBuilder_81: -2411592437560071557
+      CityBuilder_82: 1497054484153238943
+      CityBuilder_83: 8538239489634456415
+      CityBuilder_84: -8731450148665263681
+      CityBuilder_85: -5922613486596633463
+      CityBuilder_86: 2431266781912650359
+      CityBuilder_87: -8875406966282365271
+      CityBuilder_88: 4186339628199282126
+      CityBuilder_89: -7776049156299996730
+      CityBuilder_9: -2339971902535954881
+      CityBuilder_90: -5438940503956848393
+      CityBuilder_91: -3074548139898490720
+      CityBuilder_92: 4238434080571605401
+      CityBuilder_93: 546289047700540642
+      CityBuilder_94: 7770017167573904074
+      CityBuilder_95: 1176435800583408801
+      CityBuilder_96: 8079809098343652111
+      CityBuilder_97: 4583782245880621701
+      CityBuilder_98: -8258462645822173929
+      CityBuilder_99: 8460454170780023064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

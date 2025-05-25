@@ -18,7 +18,6 @@ namespace Player
         public float MaxX { get; }
 
         public bool HasReachedGoal => Mathf.Approximately(CurrentY, MaxY);
-        public bool IsGameOver => HasReachedGoal;
 
         public PlayerModel(Vector3 startingPosition, GameConfig gameConfig)
         {
