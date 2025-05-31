@@ -7,14 +7,14 @@ namespace Game
 {
     public class GameView : MonoBehaviour
     {
+        [Header("Buttons")]
         [SerializeField] private GameObject gameOverScreen;
         [SerializeField] private Button restartButton;
 
         public UnityEvent OnRestartButtonClicked = new UnityEvent();
         private void Awake()
         {
-            ReferenceValidator.Validate(gameOverScreen, nameof(gameOverScreen), this);
-            ReferenceValidator.Validate(restartButton, nameof(restartButton), this);
+            ValidateReferences();
         }
 
         private void Start()
@@ -31,6 +31,12 @@ namespace Game
         public void HideGameOver()
         {
             gameOverScreen.SetActive(false);
+        }
+
+        private void ValidateReferences()
+        {
+            ReferenceValidator.Validate(gameOverScreen, nameof(gameOverScreen), this);
+            ReferenceValidator.Validate(restartButton, nameof(restartButton), this);
         }
     }
 }

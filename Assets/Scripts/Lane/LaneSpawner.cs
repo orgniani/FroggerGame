@@ -7,9 +7,11 @@ namespace Lane
 {
     public class LaneSpawner : MonoBehaviour
     {
+        [Header("Lanes")]
         [SerializeField] private LaneView lanePrefab;
-
         [SerializeField] private List<LaneConfig> laneConfigs;
+
+        [Header("Game")]
         [SerializeField] private GameConfig gameConfig;
 
         private void Awake()
@@ -44,7 +46,13 @@ namespace Lane
             ReferenceValidator.Validate(gameConfig, nameof(gameConfig), this);
 
             if (laneConfigs.Count == 0)
+            {
                 Debug.LogError("LaneConfigs list is empty!", this);
+                return;
+            }
+
+            foreach (var config in laneConfigs)
+                ReferenceValidator.Validate(config, nameof(config), this);
         }
     }
 }

@@ -7,10 +7,12 @@ namespace Health
 {
     public class HealthView : MonoBehaviour
     {
+        [Header("Sprites")]
         [SerializeField] private Sprite fullHeart;
         [SerializeField] private Sprite emptyHeart;
-        [SerializeField] private Image heartPrefab;
 
+        [Header("References")]
+        [SerializeField] private Image heartPrefab;
         [SerializeField] private Transform heartParent;
 
         private List<Image> _hearts = new();

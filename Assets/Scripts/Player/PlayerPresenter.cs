@@ -24,8 +24,6 @@ namespace Player
             _healthModel = healthModel;
 
             _inputManager = inputManager;
-
-            //TODO: Shouldnt the view listen to the inputs?
             _inputHandler = new PlayerInputHandler(inputThreshold);
 
             _inputManager.OnMoveInput?.AddListener(HandleMoveInput);

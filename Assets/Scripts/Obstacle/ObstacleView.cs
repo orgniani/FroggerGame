@@ -1,3 +1,4 @@
+using Helpers;
 using UnityEngine;
 
 namespace Obstacle
@@ -10,6 +11,7 @@ namespace Obstacle
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            ReferenceValidator.Validate(_spriteRenderer, nameof(_spriteRenderer), this);
         }
 
         public void Initialize(Sprite sprite, bool flip)

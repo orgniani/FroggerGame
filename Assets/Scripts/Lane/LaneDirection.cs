@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace Lane
 {
     public enum LaneDirection

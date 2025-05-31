@@ -1,3 +1,4 @@
+using Helpers;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,7 +9,7 @@ namespace Player
     {
         [Header("References")]
         [SerializeField] private Animator animator;
-        [SerializeField] private Transform spriteTransform;
+        [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private LayerMask obstacleLayerMask;
 
         [Header("Animator Parameters")]
@@ -24,6 +25,11 @@ namespace Player
 
         private float _startingY;
         private Coroutine _moveCoroutine;
+
+        private void Awake()
+        {
+            ValidateReferences();
+        }
 
         private void Start()
         {
@@ -72,10 +78,7 @@ namespace Player
         public void SetFacingDirection(int xDir)
         {
             if (xDir == 0) return;
-
-            Vector3 localScale = spriteTransform.localScale;
-            localScale.x = Mathf.Abs(localScale.x) * Mathf.Sign(xDir);
-            spriteTransform.localScale = localScale;
+            spriteRenderer.flipX = xDir < 0;
         }
 
         public void ResetPosition()
@@ -103,6 +106,17 @@ namespace Player
         public void PlayGameOverAnimation(bool isDead)
         {
             animator.SetBool(deadBoolParameter, isDead);
+        }
+
+        private void ValidateReferences()
+        {
+            ReferenceValidator.Validate(animator, nameof(animator), this);
+            ReferenceValidator.Validate(spriteRenderer, nameof(spriteRenderer), this);
+
+            if (obstacleLayerMask == 0)
+            {
+                Debug.LogError("Obstacle Layer Mask is not set!", this);
+            }
         }
     }
 }

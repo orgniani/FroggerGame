@@ -1,3 +1,4 @@
+using Helpers;
 using Obstacle;
 using UnityEngine;
 
@@ -9,6 +10,11 @@ namespace Lane
         public ObstacleView ObstaclePrefab => obstaclePrefab;
 
         private LanePresenter _presenter;
+
+        private void Awake()
+        {
+            ReferenceValidator.Validate(obstaclePrefab, nameof(obstaclePrefab), this);
+        }
 
         public void SetPresenter(LanePresenter presenter)
         {

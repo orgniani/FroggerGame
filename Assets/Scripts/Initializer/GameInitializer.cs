@@ -46,7 +46,9 @@ namespace Initializer
             ReferenceValidator.Validate(gameView, nameof(gameView), this);
             ReferenceValidator.Validate(playerView, nameof(playerView), this);
             ReferenceValidator.Validate(healthView, nameof(healthView), this);
+
             ReferenceValidator.Validate(inputManager, nameof(inputManager), this);
+
             ReferenceValidator.Validate(gameConfig, nameof(gameConfig), this);
         }
     }
