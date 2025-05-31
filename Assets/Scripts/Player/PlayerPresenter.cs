@@ -25,6 +25,7 @@ namespace Player
 
             _inputManager = inputManager;
 
+            //TODO: Shouldnt the view listen to the inputs?
             _inputHandler = new PlayerInputHandler(inputThreshold);
 
             _inputManager.OnMoveInput?.AddListener(HandleMoveInput);
@@ -45,12 +46,10 @@ namespace Player
         {
             _model.Move(xDir, yDir);
             _view.UpdatePosition(_model.CurrentX, _model.CurrentY);
+            _view.SetFacingDirection(xDir);
 
             if (_model.HasReachedGoal)
-            {
-                OnGameOverTriggered?.Invoke();
-                _isGameOver = true;
-            }
+                TriggerGameOver();
         }
 
         private void ResetPlayerPosition()
@@ -69,16 +68,25 @@ namespace Player
 
         private void HandleObstacleHit()
         {
+            if (_isGameOver)
+                return;
+
             _healthModel.TakeDamage(1);
 
-            if (_model.HasReachedGoal || _healthModel.IsDepleted)
+            if (_healthModel.IsDepleted)
             {
-                OnGameOverTriggered?.Invoke();
-                _isGameOver = true;
+                TriggerGameOver();
                 return;
             }
 
             ResetPlayerPosition();
+        }
+
+        private void TriggerGameOver()
+        {
+            _view.PlayGameOverAnimation(_healthModel.IsDepleted);
+            OnGameOverTriggered?.Invoke();
+            _isGameOver = true;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -5,12 +6,24 @@ namespace Player
 {
     public class PlayerView : MonoBehaviour
     {
+        [Header("References")]
+        [SerializeField] private Animator animator;
+        [SerializeField] private Transform spriteTransform;
         [SerializeField] private LayerMask obstacleLayerMask;
+
+        [Header("Animator Parameters")]
+        [SerializeField] private string jumpTriggerParameter = "jump";
+        [SerializeField] private string deadBoolParameter = "dead";
+
+        [Header("Movement Animation Settings")]
+        [SerializeField] private float moveDuration = 0.3f;
+        [SerializeField] private AnimationCurve moveCurve;
 
         public UnityEvent<int> OnLaneChange = new UnityEvent<int>();
         public UnityEvent OnObstacleHit = new UnityEvent();
 
         private float _startingY;
+        private Coroutine _moveCoroutine;
 
         private void Start()
         {
@@ -19,15 +32,59 @@ namespace Player
 
         public void UpdatePosition(float newX, float newY)
         {
+            animator.SetTrigger(jumpTriggerParameter);
+
+            if (_moveCoroutine != null)
+                StopCoroutine(_moveCoroutine);
+
+            _moveCoroutine = StartCoroutine(MoveSmoothly(new Vector2(newX, newY)));
+        }
+
+        private IEnumerator MoveSmoothly(Vector2 targetPos)
+        {
+            Vector2 startPos = transform.position;
+            float elapsed = 0f;
+
+            while (elapsed < moveDuration)
+            {
+                float t = elapsed / moveDuration;
+                float easedT = moveCurve.Evaluate(t);
+                Vector2 newPos = Vector2.Lerp(startPos, targetPos, easedT);
+
+                transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
+
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            transform.position = new Vector3(targetPos.x, targetPos.y, transform.position.z);
+            _moveCoroutine = null;
+        }
+
+        private void TeleportToPosition(float newX, float newY)
+        {
             var pos = transform.position;
             pos.x = newX;
             pos.y = newY;
             transform.position = pos;
         }
 
+        public void SetFacingDirection(int xDir)
+        {
+            if (xDir == 0) return;
+
+            Vector3 localScale = spriteTransform.localScale;
+            localScale.x = Mathf.Abs(localScale.x) * Mathf.Sign(xDir);
+            spriteTransform.localScale = localScale;
+        }
+
         public void ResetPosition()
         {
-            UpdatePosition(0, _startingY);
+            if (_moveCoroutine != null)
+                StopCoroutine(_moveCoroutine);
+
+            animator.SetBool(deadBoolParameter, false);
+            TeleportToPosition(0, _startingY);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -41,6 +98,11 @@ namespace Player
         private bool IsInLayerMask(int layer, LayerMask layerMask)
         {
             return (layerMask.value & (1 << layer)) != 0;
+        }
+
+        public void PlayGameOverAnimation(bool isDead)
+        {
+            animator.SetBool(deadBoolParameter, isDead);
         }
     }
 }
