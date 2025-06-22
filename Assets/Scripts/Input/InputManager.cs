@@ -2,17 +2,19 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Helpers;
+using Interfaces;
 
 namespace Input
 {
-    public class InputManager : MonoBehaviour
+    public class InputManager : MonoBehaviour, IInputManager
     {
         [Header("Inputs")]
         [SerializeField] private InputActionAsset inputActions;
         [SerializeField] private string moveAction = "Move";
 
         private InputAction _moveAction;
-        public UnityEvent<Vector2> OnMoveInput = new UnityEvent<Vector2>();
+        public UnityEvent<Vector2> OnMoveInput { get; } = new UnityEvent<Vector2>();
+
 
         private void Awake()
         {
