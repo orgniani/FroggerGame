@@ -31,8 +31,8 @@ namespace Lane
 
             if (!_initialized)
             {
-                SpawnObstacle();
                 _model.UpdateNextSpawnX();
+                SpawnObstacle();
                 _initialized = true;
                 return;
             }

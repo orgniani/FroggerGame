@@ -43,14 +43,17 @@ namespace Tests.Editor.Lane
         }
 
         [Test]
-        public void Obstacle_IsInitializedAndReset()
+        public void Obstacle_Reset_UsesCorrectPosition_WhenSpawned()
         {
-            float expectedX = _model.LastSpawnedX;
             _presenter.Update(0.016f);
 
             var view = _laneGO.GetComponentInChildren<MockObstacleView>();
-            Assert.IsTrue(view.Initialized, "Obstacle was not initialized");
-            Assert.AreEqual(expectedX, view.LastResetPos.x, 0.01f);
+
+            float step = _config.ObstacleWidth + _config.Distance;
+            float expectedX = -10f - _config.ObstacleWidth + step;
+
+            Assert.AreEqual(expectedX, view.LastResetPos.x, 0.01f,
+                $"ResetPosition was not called with the updated spawn X (expected {expectedX}, got {view.LastResetPos.x})");
         }
 
         [Test]

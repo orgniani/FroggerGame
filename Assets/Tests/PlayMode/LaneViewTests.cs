@@ -6,7 +6,7 @@ using Lane;
 using Config;
 using Obstacle;
 
-namespace Tests.PlayMode.Lane
+namespace Tests.PlayMode
 {
     public class LaneViewTests
     {
