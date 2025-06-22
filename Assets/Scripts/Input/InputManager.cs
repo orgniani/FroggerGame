@@ -15,7 +15,6 @@ namespace Input
         private InputAction _moveAction;
         public UnityEvent<Vector2> OnMoveInput { get; } = new UnityEvent<Vector2>();
 
-
         private void Awake()
         {
             ReferenceValidator.Validate(inputActions, nameof(inputActions), this);
@@ -23,13 +22,7 @@ namespace Input
 
         private void OnEnable()
         {
-            _moveAction = inputActions.FindAction(moveAction);
-            if (_moveAction != null)
-            {
-                _moveAction.performed += HandleMovementInput;
-                _moveAction.canceled += HandleMovementInput;
-                _moveAction.Enable();
-            }
+            SetupInput();
         }
 
         private void OnDisable()
@@ -39,6 +32,19 @@ namespace Input
                 _moveAction.performed -= HandleMovementInput;
                 _moveAction.canceled -= HandleMovementInput;
                 _moveAction.Disable();
+            }
+        }
+
+        public void SetupInput()
+        {
+            if (inputActions == null) return;
+
+            _moveAction = inputActions.FindAction(moveAction);
+            if (_moveAction != null)
+            {
+                _moveAction.performed += HandleMovementInput;
+                _moveAction.canceled += HandleMovementInput;
+                _moveAction.Enable();
             }
         }
 

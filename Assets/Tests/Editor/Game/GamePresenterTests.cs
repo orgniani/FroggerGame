@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using Game;
-using Tests.Editor.Mocks;
+using Tests.Mocks;
 
 namespace Tests.Editor.Game
 {

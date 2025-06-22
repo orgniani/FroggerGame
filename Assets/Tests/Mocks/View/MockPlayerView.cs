@@ -1,7 +1,7 @@
 using Interfaces;
 using UnityEngine.Events;
 
-namespace Tests.Editor.Mocks
+namespace Tests.Mocks
 {
     public class MockPlayerView : IPlayerView
     {

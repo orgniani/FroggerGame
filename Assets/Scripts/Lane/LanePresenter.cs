@@ -1,26 +1,27 @@
 using Obstacle;
 using System.Collections.Generic;
 using UnityEngine;
+using Interfaces;
 
 namespace Lane
 {
     public class LanePresenter
     {
         private readonly LaneModel _model;
-        private readonly LaneView _view;
+        private readonly ILaneView _view;
 
         private readonly Transform _parent;
-        private readonly ObstacleView _obstaclePrefab;
+        private readonly IObstacleView _obstaclePrefab;
 
         private readonly List<ObstaclePresenter> _obstaclePresenters = new();
 
         private bool _initialized;
 
-        public LanePresenter(LaneModel model, LaneView view)
+        public LanePresenter(LaneModel model, ILaneView view)
         {
             _model = model;
             _view = view;
-            _parent = view.transform;
+            _parent = view.Transform;
             _obstaclePrefab = view.ObstaclePrefab;
         }
 
@@ -30,8 +31,8 @@ namespace Lane
 
             if (!_initialized)
             {
-                _model.UpdateNextSpawnX();
                 SpawnObstacle();
+                _model.UpdateNextSpawnX();
                 _initialized = true;
                 return;
             }
@@ -91,9 +92,11 @@ namespace Lane
         {
             bool flip = _model.Direction == LaneDirection.Left;
 
-            var view = GameObject.Instantiate(_obstaclePrefab, _parent);
+            var viewGO = GameObject.Instantiate(_obstaclePrefab.AsMonoBehaviour(), _parent);
+            var view = viewGO.GetComponent<IObstacleView>();
+
             view.Initialize(_model.Config.Sprite, flip);
-            view.ResetPosition(_model.LastSpawnedX, _view.transform.position.y);
+            view.ResetPosition(_model.LastSpawnedX, _view.Transform.position.y);
 
             var model = new ObstacleModel(
                 _model.LastSpawnedX,

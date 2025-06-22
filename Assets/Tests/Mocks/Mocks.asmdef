@@ -1,11 +1,8 @@
 {
-    "name": "Orgniani.Lane.Runtime",
+    "name": "Mocks",
     "rootNamespace": "",
     "references": [
-        "Orgniani.Helpers.Runtime",
-        "Orgniani.Obstacle.Runtime",
-        "Orgniani.Config.Runtime",
-        "Orgniani.Interfaces.Runtime"
+        "GUID:17d4fde79effb3e4bba59bbe21903864"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

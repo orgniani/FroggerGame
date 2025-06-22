@@ -9,7 +9,9 @@
         "Orgniani.Health.Runtime",
         "Orgniani.Game.Runtime",
         "Orgniani.Lane.Runtime",
-        "Orgniani.Obstacle.Runtime"
+        "Orgniani.Obstacle.Runtime",
+        "Orgniani.Config.Runtime",
+        "Mocks"
     ],
     "includePlatforms": [
         "Editor"

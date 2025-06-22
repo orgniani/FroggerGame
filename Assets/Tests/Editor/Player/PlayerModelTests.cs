@@ -2,7 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 using Player;
 using Interfaces;
-using Tests.Editor.Mocks;
+using Tests.Mocks;
 
 namespace Tests.Editor.Player
 {

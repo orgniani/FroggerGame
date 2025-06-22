@@ -1,10 +1,11 @@
 using Config;
+using Interfaces;
 
 namespace Lane
 {
     public class LaneModel
     {
-        public LaneConfig Config { get; }
+        public ILaneConfig Config { get; }
         public LaneDirection Direction { get; }
 
         private readonly float _leftBoundary;
@@ -12,7 +13,7 @@ namespace Lane
 
         public float LastSpawnedX { get; private set; }
 
-        public LaneModel(LaneConfig config, LaneDirection direction, float leftBoundary, float rightBoundary)
+        public LaneModel(ILaneConfig config, LaneDirection direction, float leftBoundary, float rightBoundary)
         {
             Config = config;
             Direction = direction;

@@ -3,7 +3,7 @@ using UnityEngine;
 using Interfaces;
 using Player;
 using Health;
-using Tests.Editor.Mocks;
+using Tests.Mocks;
 
 namespace Tests.Editor.Player
 {

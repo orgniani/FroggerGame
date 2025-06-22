@@ -1,7 +1,7 @@
 using UnityEngine;
 using Interfaces;
 
-namespace Tests.Editor.Mocks
+namespace Tests.Mocks
 {
     public class MockGameConfig : IGameConfig
     {

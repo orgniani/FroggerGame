@@ -2,7 +2,7 @@ using Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Tests.Editor.Mocks
+namespace Tests.Mocks
 {
     public class MockInputManager : IInputManager
     {
