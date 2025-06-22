@@ -6,9 +6,13 @@
         "UnityEditor.TestRunner",
         "Unity.InputSystem.TestFramework",
         "Unity.InputSystem",
+        "Orgniani.Input.Runtime",
         "Orgniani.Player.Runtime",
         "Orgniani.Game.Runtime",
-        "Orgniani.Input.Runtime"
+        "Orgniani.Obstacle.Runtime",
+        "Orgniani.Config.Runtime",
+        "Orgniani.Lane.Runtime",
+        "Orgniani.Interfaces.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
