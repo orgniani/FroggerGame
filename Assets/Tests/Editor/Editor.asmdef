@@ -6,7 +6,10 @@
         "UnityEditor.TestRunner",
         "Orgniani.Interfaces.Runtime",
         "Orgniani.Player.Runtime",
-        "Orgniani.Health.Runtime"
+        "Orgniani.Health.Runtime",
+        "Orgniani.Game.Runtime",
+        "Orgniani.Lane.Runtime",
+        "Orgniani.Obstacle.Runtime"
     ],
     "includePlatforms": [
         "Editor"

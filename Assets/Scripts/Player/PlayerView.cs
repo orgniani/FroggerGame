@@ -116,7 +116,6 @@ namespace Player
                 return;
 #endif
 
-
             ReferenceValidator.Validate(animator, nameof(animator), this);
             ReferenceValidator.Validate(spriteRenderer, nameof(spriteRenderer), this);
 

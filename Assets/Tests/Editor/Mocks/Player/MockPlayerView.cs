@@ -1,5 +1,4 @@
 using Interfaces;
-using UnityEngine;
 using UnityEngine.Events;
 
 namespace Tests.Editor.Mocks

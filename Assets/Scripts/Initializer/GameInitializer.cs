@@ -4,7 +4,6 @@ using Health;
 using Input;
 using Helpers;
 using Config;
-using Interfaces;
 using UnityEngine;
 
 namespace Initializer

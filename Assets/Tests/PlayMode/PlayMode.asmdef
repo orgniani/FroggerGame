@@ -4,7 +4,8 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Orgniani.Player.Runtime"
+        "Orgniani.Player.Runtime",
+        "Orgniani.Game.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

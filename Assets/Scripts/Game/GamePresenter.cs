@@ -1,15 +1,17 @@
+using Interfaces;
 using Player;
 namespace Game
 {
     public class GamePresenter
     {
         private readonly GameModel _model;
-        private readonly GameView _view;
+        private readonly IGameView _view;
 
-        private PlayerPresenter _playerPresenter;
+        private IPlayerPresenter _playerPresenter;
+
         public bool IsGameOver => _model.IsGameOver;
 
-        public GamePresenter(GameModel model, GameView view, PlayerPresenter playerPresenter)
+        public GamePresenter(GameModel model, IGameView view, IPlayerPresenter playerPresenter)
         {
             _model = model;
             _view = view;

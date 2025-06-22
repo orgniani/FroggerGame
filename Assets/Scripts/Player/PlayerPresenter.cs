@@ -6,7 +6,7 @@ using Interfaces;
 
 namespace Player
 {
-    public class PlayerPresenter
+    public class PlayerPresenter : IPlayerPresenter
     {
         private readonly PlayerModel _model;
         private readonly IPlayerView _view;
@@ -16,7 +16,7 @@ namespace Player
         private readonly PlayerInputHandler _inputHandler;
 
         private bool _isGameOver;
-        public UnityEvent OnGameOverTriggered = new UnityEvent();
+        public UnityEvent OnGameOverTriggered { get; } = new UnityEvent();
 
         public PlayerPresenter(PlayerModel model, IPlayerView view, HealthModel healthModel, IInputManager inputManager, float inputThreshold)
 

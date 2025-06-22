@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Input
+namespace Interfaces
 {
     public interface IInputManager
     {
