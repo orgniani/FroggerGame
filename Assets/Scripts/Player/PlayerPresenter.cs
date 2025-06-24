@@ -2,22 +2,24 @@ using UnityEngine;
 using Input;
 using Health;
 using UnityEngine.Events;
+using Interfaces;
 
 namespace Player
 {
-    public class PlayerPresenter
+    public class PlayerPresenter : IPlayerPresenter
     {
         private readonly PlayerModel _model;
-        private readonly PlayerView _view;
+        private readonly IPlayerView _view;
         private readonly HealthModel _healthModel;
 
-        private readonly InputManager _inputManager;
+        private readonly IInputManager _inputManager;
         private readonly PlayerInputHandler _inputHandler;
 
         private bool _isGameOver;
-        public UnityEvent OnGameOverTriggered = new UnityEvent();
+        public UnityEvent OnGameOverTriggered { get; } = new UnityEvent();
 
-        public PlayerPresenter(PlayerModel model, PlayerView view, HealthModel healthModel, InputManager inputManager, float inputThreshold)
+        public PlayerPresenter(PlayerModel model, IPlayerView view, HealthModel healthModel, IInputManager inputManager, float inputThreshold)
+
         {
             _model = model;
             _view = view;

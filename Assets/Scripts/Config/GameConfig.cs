@@ -1,9 +1,10 @@
 using UnityEngine;
+using Interfaces;
 
 namespace Config
 {
     [CreateAssetMenu(menuName = "Config/Game", fileName = "GameCfg", order = 0)]
-    public class GameConfig : ScriptableObject
+    public class GameConfig : ScriptableObject, IGameConfig
     {
         [field: SerializeField] public float LaneWidth { get; private set; } = 1f;
         [field: SerializeField] public float LaneHeight { get; private set; } = 1f;

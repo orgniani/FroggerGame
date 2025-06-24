@@ -4,7 +4,8 @@
     "references": [
         "Orgniani.Helpers.Runtime",
         "Orgniani.Obstacle.Runtime",
-        "Orgniani.Config.Runtime"
+        "Orgniani.Config.Runtime",
+        "Orgniani.Interfaces.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

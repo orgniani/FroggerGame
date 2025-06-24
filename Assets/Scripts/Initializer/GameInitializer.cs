@@ -32,6 +32,7 @@ namespace Initializer
 
             var gameModel = new GameModel();
             var healthModel = new HealthModel(gameConfig.MaxLives);
+
             var playerModel = new PlayerModel(startingPosition, gameConfig);
 
             var healthPresenter = new HealthPresenter(healthModel, healthView);

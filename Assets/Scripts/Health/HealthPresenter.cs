@@ -1,11 +1,13 @@
+using Interfaces;
+
 namespace Health
 {
     public class HealthPresenter
     {
         private readonly HealthModel _model;
-        private readonly HealthView _view;
+        private readonly IHealthView _view;
 
-        public HealthPresenter(HealthModel model, HealthView view)
+        public HealthPresenter(HealthModel model, IHealthView view)
         {
             _model = model;
             _view = view;

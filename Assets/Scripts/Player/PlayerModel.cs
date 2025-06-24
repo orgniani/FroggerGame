@@ -1,5 +1,5 @@
-using Config;
 using UnityEngine;
+using Interfaces;
 
 namespace Player
 {
@@ -19,7 +19,7 @@ namespace Player
 
         public bool HasReachedGoal => Mathf.Approximately(CurrentY, MaxY);
 
-        public PlayerModel(Vector3 startingPosition, GameConfig gameConfig)
+        public PlayerModel(Vector3 startingPosition, IGameConfig gameConfig)
         {
             _startingX = startingPosition.x;
             _startingY = startingPosition.y;

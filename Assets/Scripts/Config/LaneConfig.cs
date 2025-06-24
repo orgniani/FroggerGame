@@ -1,9 +1,10 @@
+using Interfaces;
 using UnityEngine;
 
 namespace Config
 {
     [CreateAssetMenu(menuName = "Config/Lane", fileName = "LaneCfg", order = 0)]
-    public class LaneConfig : ScriptableObject
+    public class LaneConfig : ScriptableObject, ILaneConfig
     {
         [field: SerializeField] public int ObstacleWidth { get; private set; } = 1;
 

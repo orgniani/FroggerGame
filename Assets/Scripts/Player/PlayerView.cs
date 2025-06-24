@@ -1,11 +1,12 @@
 using Helpers;
+using Interfaces;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace Player
 {
-    public class PlayerView : MonoBehaviour
+    public class PlayerView : MonoBehaviour, IPlayerView
     {
         [Header("References")]
         [SerializeField] private Animator animator;
@@ -21,7 +22,7 @@ namespace Player
         [SerializeField] private AnimationCurve moveCurve;
 
         public UnityEvent<int> OnLaneChange = new UnityEvent<int>();
-        public UnityEvent OnObstacleHit = new UnityEvent();
+        public UnityEvent OnObstacleHit { get; } = new UnityEvent();
 
         private float _startingY;
         private Coroutine _moveCoroutine;
@@ -110,6 +111,11 @@ namespace Player
 
         private void ValidateReferences()
         {
+#if UNITY_INCLUDE_TESTS
+            if (Application.isPlaying)
+                return;
+#endif
+
             ReferenceValidator.Validate(animator, nameof(animator), this);
             ReferenceValidator.Validate(spriteRenderer, nameof(spriteRenderer), this);
 

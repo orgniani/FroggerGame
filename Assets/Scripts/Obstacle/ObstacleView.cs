@@ -1,12 +1,14 @@
 using Helpers;
 using UnityEngine;
+using Interfaces;
 
 namespace Obstacle
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class ObstacleView : MonoBehaviour
+    public class ObstacleView : MonoBehaviour, IObstacleView
     {
         private SpriteRenderer _spriteRenderer;
+        public MonoBehaviour AsMonoBehaviour() => this;
 
         private void Awake()
         {

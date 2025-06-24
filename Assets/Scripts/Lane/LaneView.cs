@@ -1,18 +1,26 @@
 using Helpers;
 using Obstacle;
 using UnityEngine;
+using Interfaces;
 
 namespace Lane
 {
-    public class LaneView : MonoBehaviour
+    public class LaneView : MonoBehaviour, ILaneView
     {
         [SerializeField] private ObstacleView obstaclePrefab;
-        public ObstacleView ObstaclePrefab => obstaclePrefab;
-
+        
         private LanePresenter _presenter;
+        
+        public IObstacleView ObstaclePrefab => obstaclePrefab;
+        public Transform Transform => transform;
 
         private void Awake()
         {
+#if UNITY_INCLUDE_TESTS
+            if (Application.isPlaying)
+                return;
+#endif
+
             ReferenceValidator.Validate(obstaclePrefab, nameof(obstaclePrefab), this);
         }
 

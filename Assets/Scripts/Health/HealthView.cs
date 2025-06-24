@@ -2,10 +2,11 @@ using Helpers;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Interfaces;
 
 namespace Health
 {
-    public class HealthView : MonoBehaviour
+    public class HealthView : MonoBehaviour, IHealthView
     {
         [Header("Sprites")]
         [SerializeField] private Sprite fullHeart;
@@ -43,6 +44,11 @@ namespace Health
 
         private void ValidateReferences()
         {
+#if UNITY_INCLUDE_TESTS
+            if (Application.isPlaying)
+                return;
+#endif
+
             ReferenceValidator.Validate(fullHeart, nameof(fullHeart), this);
             ReferenceValidator.Validate(emptyHeart, nameof(emptyHeart), this);
             ReferenceValidator.Validate(heartPrefab, nameof(heartPrefab), this);
