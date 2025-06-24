@@ -76,5 +76,33 @@ namespace Tests.Editor.Player
             model.Move(0, 100);
             Assert.IsTrue(model.HasReachedGoal);
         }
+
+        [Test]
+        public void Constructor_SetsInitialValuesCorrectly()
+        {
+            Vector3 startPos = new Vector3(2f, 3f);
+            var model = new PlayerModel(startPos, _config);
+
+            Assert.AreEqual(2f, model.CurrentX);
+            Assert.AreEqual(3f, model.CurrentY);
+            Assert.AreEqual(_config.LeftBoundary, model.MinX);
+            Assert.AreEqual(_config.RightBoundary, model.MaxX);
+            Assert.AreEqual(_config.TopBoundary, model.MaxY);
+        }
+
+        [Test]
+        public void HasReachedGoal_WhenNotAtTop_ReturnsFalse()
+        {
+            var model = new PlayerModel(Vector3.zero, _config);
+            Assert.IsFalse(model.HasReachedGoal);
+        }
+
+        [Test]
+        public void Move_ClampedToLeftBoundary()
+        {
+            var model = new PlayerModel(Vector3.zero, _config);
+            model.Move(-100, 0);
+            Assert.AreEqual(_config.LeftBoundary, model.CurrentX);
+        }
     }
 }

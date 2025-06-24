@@ -3,6 +3,9 @@ using UnityEngine;
 using Lane;
 using Config;
 using Tests.Mocks;
+using Obstacle;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace Tests.Editor.Lane
 {
@@ -57,12 +60,42 @@ namespace Tests.Editor.Lane
         }
 
         [Test]
-        public void SecondUpdate_SpawnsNewObstacle_WhenBeyondBoundary()
+        public void SecondUpdate_CreatesNewObstacle_IfNoneCanBeReused()
         {
             _presenter.Update(0.016f);
             _model.UpdateNextSpawnX();
             _presenter.Update(0.016f);
             Assert.AreEqual(2, _laneGO.transform.childCount);
+        }
+
+        [Test]
+        public void InBoundsObstacle_IsNotReused_WhenWithinMargin()
+        {
+            _presenter.Update(0.016f);
+            var view = _laneGO.GetComponentInChildren<MockObstacleView>();
+
+            float inBoundsX = _model.GetRightBoundWithMargin() - 1f;
+            view.SetXPosition(inBoundsX);
+
+            _model.UpdateNextSpawnX();
+            _presenter.Update(0.016f);
+
+            Assert.AreEqual(2, _laneGO.transform.childCount, "Expected new obstacle to be spawned because previous one is still in bounds");
+        }
+
+        [Test]
+        public void Update_MovesObstacles()
+        {
+            _presenter.Update(0.016f);
+            var obstacle = _laneGO.GetComponentInChildren<MockObstacleView>();
+
+            float xBefore = obstacle.transform.position.x;
+
+            _presenter.Update(1f);
+
+            float xAfter = obstacle.transform.position.x;
+
+            Assert.AreNotEqual(xBefore, xAfter, "Obstacle should have moved");
         }
 
         [TearDown]

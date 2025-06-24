@@ -91,6 +91,13 @@ namespace Tests.PlayMode
         {
             if (_laneGO != null)
                 Object.Destroy(_laneGO);
+
+            if (_obstaclePrefab != null)
+                Object.Destroy(_obstaclePrefab.gameObject);
+
+            if (_laneConfig != null)
+                Object.Destroy(_laneConfig);
+
             yield return null;
         }
 

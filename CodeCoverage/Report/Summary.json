@@ -1,62 +1,53 @@
 {
   "summary": {
-    "generatedon": "2025-06-22T20:38:43Z",
-    "parser": "MultiReportParser (4x OpenCoverParser)",
-    "assemblies": 11,
-    "classes": 29,
-    "files": 29,
-    "coveredlines": 323,
-    "uncoveredlines": 331,
-    "coverablelines": 654,
-    "totallines": 1367,
-    "linecoverage": 49.3,
+    "generatedon": "2025-06-24T22:45:11Z",
+    "parser": "MultiReportParser (83x OpenCoverParser)",
+    "assemblies": 9,
+    "classes": 22,
+    "files": 22,
+    "coveredlines": 387,
+    "uncoveredlines": 112,
+    "coverablelines": 499,
+    "totallines": 1043,
+    "linecoverage": 77.5,
     "coveredbranches": 0,
     "totalbranches": 0,
-    "coveredmethods": 80,
-    "totalmethods": 179,
-    "methodcoverage": 44.6
+    "coveredmethods": 108,
+    "totalmethods": 141,
+    "methodcoverage": 76.5
  },
   "coverage": {
     "assemblies": [
-      { "name": "Editor", "classes": 6, "coverage": 99.1, "coveredlines": 123, "coverablelines": 124, "totallines": 274, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 97.2, "coveredmethods": 36, "totalmethods": 37, "classesinassembly": [
-        { "name": "Tests.Editor.Mocks.MockGameConfig", "coverage": 87.5, "coveredlines": 7, "coverablelines": 8, "totallines": 17, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 87.5, "coveredmethods": 7, "totalmethods": 8 },
-        { "name": "Tests.Editor.Mocks.MockInputManager", "coverage": 100, "coveredlines": 2, "coverablelines": 2, "totallines": 14, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 3, "totalmethods": 3 },
-        { "name": "Tests.Editor.Mocks.MockPlayerView", "coverage": 100, "coveredlines": 5, "coverablelines": 5, "totallines": 20, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 },
-        { "name": "Tests.Editor.Player.PlayerInputHandlerTests", "coverage": 100, "coveredlines": 28, "coverablelines": 28, "totallines": 57, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 },
-        { "name": "Tests.Editor.Player.PlayerModelTests", "coverage": 100, "coveredlines": 43, "coverablelines": 43, "totallines": 80, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 8, "totalmethods": 8 },
-        { "name": "Tests.Editor.Player.PlayerPresenterTests", "coverage": 100, "coveredlines": 38, "coverablelines": 38, "totallines": 86, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 } ] },
-      { "name": "Orgniani.Config.Runtime", "classes": 2, "coverage": 0, "coveredlines": 0, "coverablelines": 12, "totallines": 34, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 26, "classesinassembly": [
+      { "name": "Orgniani.Config.Runtime", "classes": 2, "coverage": 33.3, "coveredlines": 4, "coverablelines": 12, "totallines": 35, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 34.6, "coveredmethods": 9, "totalmethods": 26, "classesinassembly": [
         { "name": "Config.GameConfig", "coverage": 0, "coveredlines": 0, "coverablelines": 8, "totallines": 18, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 17 },
-        { "name": "Config.LaneConfig", "coverage": 0, "coveredlines": 0, "coverablelines": 4, "totallines": 16, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 9 } ] },
-      { "name": "Orgniani.Game.Runtime", "classes": 3, "coverage": 0, "coveredlines": 0, "coverablelines": 44, "totallines": 98, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 14, "classesinassembly": [
-        { "name": "Game.GameModel", "coverage": 0, "coveredlines": 0, "coverablelines": 7, "totallines": 19, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
-        { "name": "Game.GamePresenter", "coverage": 0, "coveredlines": 0, "coverablelines": 19, "totallines": 37, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
-        { "name": "Game.GameView", "coverage": 0, "coveredlines": 0, "coverablelines": 18, "totallines": 42, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6 } ] },
-      { "name": "Orgniani.Health.Runtime", "classes": 3, "coverage": 36, "coveredlines": 18, "coverablelines": 50, "totallines": 105, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 53.8, "coveredmethods": 7, "totalmethods": 13, "classesinassembly": [
+        { "name": "Config.LaneConfig", "coverage": 100, "coveredlines": 4, "coverablelines": 4, "totallines": 17, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 9, "totalmethods": 9 } ] },
+      { "name": "Orgniani.Game.Runtime", "classes": 3, "coverage": 93.7, "coveredlines": 45, "coverablelines": 48, "totallines": 110, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 93.3, "coveredmethods": 14, "totalmethods": 15, "classesinassembly": [
+        { "name": "Game.GameModel", "coverage": 100, "coveredlines": 7, "coverablelines": 7, "totallines": 19, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 4, "totalmethods": 4 },
+        { "name": "Game.GamePresenter", "coverage": 95.2, "coveredlines": 20, "coverablelines": 21, "totallines": 42, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 75, "coveredmethods": 3, "totalmethods": 4 },
+        { "name": "Game.GameView", "coverage": 90, "coveredlines": 18, "coverablelines": 20, "totallines": 49, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 7, "totalmethods": 7 } ] },
+      { "name": "Orgniani.Health.Runtime", "classes": 3, "coverage": 92.3, "coveredlines": 48, "coverablelines": 52, "totallines": 113, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 13, "totalmethods": 13, "classesinassembly": [
         { "name": "Health.HealthModel", "coverage": 100, "coveredlines": 18, "coverablelines": 18, "totallines": 34, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 7, "totalmethods": 7 },
-        { "name": "Health.HealthPresenter", "coverage": 0, "coveredlines": 0, "coverablelines": 8, "totallines": 19, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
-        { "name": "Health.HealthView", "coverage": 0, "coveredlines": 0, "coverablelines": 24, "totallines": 52, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 } ] },
-      { "name": "Orgniani.Helpers.Runtime", "classes": 1, "coverage": 0, "coveredlines": 0, "coverablelines": 6, "totallines": 16, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1, "classesinassembly": [
-        { "name": "Helpers.ReferenceValidator", "coverage": 0, "coveredlines": 0, "coverablelines": 6, "totallines": 16, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 } ] },
-      { "name": "Orgniani.Initializer.Runtime", "classes": 1, "coverage": 0, "coveredlines": 0, "coverablelines": 20, "totallines": 57, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3, "classesinassembly": [
-        { "name": "Initializer.GameInitializer", "coverage": 0, "coveredlines": 0, "coverablelines": 20, "totallines": 57, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 } ] },
-      { "name": "Orgniani.Input.Runtime", "classes": 1, "coverage": 0, "coveredlines": 0, "coverablelines": 26, "totallines": 51, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6, "classesinassembly": [
-        { "name": "Input.InputManager", "coverage": 0, "coveredlines": 0, "coverablelines": 26, "totallines": 51, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6 } ] },
-      { "name": "Orgniani.Lane.Runtime", "classes": 4, "coverage": 0, "coveredlines": 0, "coverablelines": 121, "totallines": 242, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 27, "classesinassembly": [
-        { "name": "Lane.LaneModel", "coverage": 0, "coveredlines": 0, "coverablelines": 23, "totallines": 46, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 10 },
-        { "name": "Lane.LanePresenter", "coverage": 0, "coveredlines": 0, "coverablelines": 59, "totallines": 109, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 9 },
+        { "name": "Health.HealthPresenter", "coverage": 100, "coveredlines": 8, "coverablelines": 8, "totallines": 21, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 },
+        { "name": "Health.HealthView", "coverage": 84.6, "coveredlines": 22, "coverablelines": 26, "totallines": 58, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 5, "totalmethods": 5 } ] },
+      { "name": "Orgniani.Helpers.Runtime", "classes": 1, "coverage": 50, "coveredlines": 3, "coverablelines": 6, "totallines": 16, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1, "classesinassembly": [
+        { "name": "Helpers.ReferenceValidator", "coverage": 50, "coveredlines": 3, "coverablelines": 6, "totallines": 16, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 } ] },
+      { "name": "Orgniani.Initializer.Runtime", "classes": 1, "coverage": 0, "coveredlines": 0, "coverablelines": 20, "totallines": 56, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3, "classesinassembly": [
+        { "name": "Initializer.GameInitializer", "coverage": 0, "coveredlines": 0, "coverablelines": 20, "totallines": 56, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 } ] },
+      { "name": "Orgniani.Input.Runtime", "classes": 1, "coverage": 0, "coveredlines": 0, "coverablelines": 30, "totallines": 57, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7, "classesinassembly": [
+        { "name": "Input.InputManager", "coverage": 0, "coveredlines": 0, "coverablelines": 30, "totallines": 57, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 } ] },
+      { "name": "Orgniani.Lane.Runtime", "classes": 4, "coverage": 71.2, "coveredlines": 89, "coverablelines": 125, "totallines": 254, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 82.1, "coveredmethods": 23, "totalmethods": 28, "classesinassembly": [
+        { "name": "Lane.LaneModel", "coverage": 100, "coveredlines": 23, "coverablelines": 23, "totallines": 47, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 10, "totalmethods": 10 },
+        { "name": "Lane.LanePresenter", "coverage": 90, "coveredlines": 54, "coverablelines": 60, "totallines": 112, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 88.8, "coveredmethods": 8, "totalmethods": 9 },
         { "name": "Lane.LaneSpawner", "coverage": 0, "coveredlines": 0, "coverablelines": 29, "totallines": 58, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
-        { "name": "Lane.LaneView", "coverage": 0, "coveredlines": 0, "coverablelines": 10, "totallines": 29, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 } ] },
-      { "name": "Orgniani.Obstacle.Runtime", "classes": 3, "coverage": 0, "coveredlines": 0, "coverablelines": 50, "totallines": 101, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 13, "classesinassembly": [
-        { "name": "Obstacle.ObstacleModel", "coverage": 0, "coveredlines": 0, "coverablelines": 18, "totallines": 35, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },
-        { "name": "Obstacle.ObstaclePresenter", "coverage": 0, "coveredlines": 0, "coverablelines": 16, "totallines": 31, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
-        { "name": "Obstacle.ObstacleView", "coverage": 0, "coveredlines": 0, "coverablelines": 16, "totallines": 35, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 } ] },
-      { "name": "Orgniani.Player.Runtime", "classes": 4, "coverage": 87.7, "coveredlines": 136, "coverablelines": 155, "totallines": 298, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 93.9, "coveredmethods": 31, "totalmethods": 33, "classesinassembly": [
+        { "name": "Lane.LaneView", "coverage": 92.3, "coveredlines": 12, "coverablelines": 13, "totallines": 37, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 5, "totalmethods": 5 } ] },
+      { "name": "Orgniani.Obstacle.Runtime", "classes": 3, "coverage": 100, "coveredlines": 51, "coverablelines": 51, "totallines": 105, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 14, "totalmethods": 14, "classesinassembly": [
+        { "name": "Obstacle.ObstacleModel", "coverage": 100, "coveredlines": 18, "coverablelines": 18, "totallines": 35, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 5, "totalmethods": 5 },
+        { "name": "Obstacle.ObstaclePresenter", "coverage": 100, "coveredlines": 16, "coverablelines": 16, "totallines": 33, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 4, "totalmethods": 4 },
+        { "name": "Obstacle.ObstacleView", "coverage": 100, "coveredlines": 17, "coverablelines": 17, "totallines": 37, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 5, "totalmethods": 5 } ] },
+      { "name": "Orgniani.Player.Runtime", "classes": 4, "coverage": 94.8, "coveredlines": 147, "coverablelines": 155, "totallines": 297, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 34, "totalmethods": 34, "classesinassembly": [
         { "name": "Player.PlayerInputHandler", "coverage": 100, "coveredlines": 9, "coverablelines": 9, "totallines": 23, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 2, "totalmethods": 2 },
         { "name": "Player.PlayerModel", "coverage": 100, "coveredlines": 28, "coverablelines": 28, "totallines": 54, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 11, "totalmethods": 11 },
-        { "name": "Player.PlayerPresenter", "coverage": 95.8, "coveredlines": 46, "coverablelines": 48, "totallines": 92, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 7, "totalmethods": 7 },
-        { "name": "Player.PlayerView", "coverage": 75.7, "coveredlines": 53, "coverablelines": 70, "totallines": 129, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 84.6, "coveredmethods": 11, "totalmethods": 13 } ] },
-      { "name": "PlayMode", "classes": 1, "coverage": 100, "coveredlines": 46, "coverablelines": 46, "totallines": 91, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6, "classesinassembly": [
-        { "name": "PlayerViewTests", "coverage": 100, "coveredlines": 46, "coverablelines": 46, "totallines": 91, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 } ] } ]
+        { "name": "Player.PlayerPresenter", "coverage": 100, "coveredlines": 48, "coverablelines": 48, "totallines": 92, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 8, "totalmethods": 8 },
+        { "name": "Player.PlayerView", "coverage": 88.5, "coveredlines": 62, "coverablelines": 70, "totallines": 128, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 13, "totalmethods": 13 } ] } ]
   }
 }

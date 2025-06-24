@@ -27,12 +27,10 @@ namespace Lane
         public void SetPresenter(LanePresenter presenter)
         {
             _presenter = presenter;
-            Debug.Log("LanePresenter set on LaneView");
         }
 
         private void Update()
         {
-            Debug.Log("LaneView.Update() called");
             _presenter?.Update(Time.deltaTime);
         }
     }

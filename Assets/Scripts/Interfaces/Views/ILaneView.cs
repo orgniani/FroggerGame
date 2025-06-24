@@ -1,4 +1,3 @@
-using Interfaces;
 using UnityEngine;
 
 namespace Interfaces

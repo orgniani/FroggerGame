@@ -22,7 +22,7 @@ namespace Tests.PlayMode
             _playerGO = new GameObject("Player");
             _view = _playerGO.AddComponent<PlayerView>();
             _playerRb = _playerGO.AddComponent<Rigidbody2D>();
-            _playerRb.gravityScale = 0f; // prevent gravity interference
+            _playerRb.gravityScale = 0f;
 
             var playerCol = _playerGO.AddComponent<BoxCollider2D>();
             playerCol.isTrigger = true;

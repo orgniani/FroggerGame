@@ -61,8 +61,6 @@ namespace Lane
 
         private void SpawnObstacle()
         {
-            Debug.Log("Spawning obstacle!");
-
             var reusable = FindReusablePresenter();
             if (reusable != null)
                 ReuseObstacle(reusable);
@@ -92,8 +90,6 @@ namespace Lane
 
         private void CreateAndAddNewObstacle()
         {
-            Debug.Log("Creating new obstacle at X=" + _model.LastSpawnedX);
-
             bool flip = _model.Direction == LaneDirection.Left;
 
             var viewGO = GameObject.Instantiate(_obstaclePrefab.AsMonoBehaviour(), _parent);

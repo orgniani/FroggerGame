@@ -3,7 +3,7 @@ using Lane;
 using Config;
 using UnityEngine;
 
-namespace Tests.Editor
+namespace Tests.Editor.Lane
 {
     public class LaneModelTests
     {

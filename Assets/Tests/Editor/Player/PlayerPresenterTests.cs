@@ -82,5 +82,57 @@ namespace Tests.Editor.Player
             Assert.AreEqual(0f, _mockView.LastX);
             Assert.AreEqual(0f, _mockView.LastY);
         }
+
+        [Test]
+        public void HandleMoveInput_DoesNotMove_WhenGameOver()
+        {
+            _health.TakeDamage(_config.MaxLives);
+            _mockView.OnObstacleHit.Invoke();
+
+            _mockInput.SimulateInput(Vector2.up);
+
+            Assert.AreEqual(0f, _model.CurrentY);
+            Assert.AreEqual(0f, _mockView.LastY);
+        }
+
+        [Test]
+        public void ObstacleHit_DoesNotReduceHealth_WhenGameOver()
+        {
+            _health.TakeDamage(_config.MaxLives);
+            _mockView.OnObstacleHit.Invoke();
+
+            int livesBefore = _health.CurrentLives;
+            _mockView.OnObstacleHit.Invoke();
+
+            Assert.AreEqual(livesBefore, _health.CurrentLives);
+        }
+
+        [Test]
+        public void MoveToGoal_TriggersGameOver()
+        {
+            bool triggered = false;
+            _presenter.OnGameOverTriggered.AddListener(() => triggered = true);
+
+            _mockInput.SimulateInput(Vector2.up);
+
+            while (!_model.HasReachedGoal)
+            {
+                _mockInput.SimulateInput(Vector2.up);
+            }
+
+            Assert.IsTrue(triggered);
+        }
+
+        [Test]
+        public void ResetPlayer_ClearsGameOverFlag()
+        {
+            _health.TakeDamage(_config.MaxLives);
+            _mockView.OnObstacleHit.Invoke();
+
+            _presenter.ResetPlayer();
+            _mockInput.SimulateInput(Vector2.up);
+
+            Assert.AreEqual(1f, _model.CurrentY);
+        }
     }
 }

@@ -53,5 +53,29 @@ namespace Tests.Editor.Player
             Vector2Int result = _inputHandler.GetMoveDirection(input);
             Assert.AreEqual(Vector2Int.zero, result);
         }
+
+        [Test]
+        public void GetMoveDirection_InputEqualsThreshold_ReturnsZero()
+        {
+            Vector2 input = new Vector2(0.5f, 0.5f);
+            Vector2Int result = _inputHandler.GetMoveDirection(input);
+            Assert.AreEqual(Vector2Int.zero, result);
+        }
+
+        [Test]
+        public void GetMoveDirection_DiagonalInputAboveThreshold_ReturnsDiagonalVector()
+        {
+            Vector2 input = new Vector2(1f, 1f);
+            Vector2Int result = _inputHandler.GetMoveDirection(input);
+            Assert.AreEqual(new Vector2Int(1, 1), result);
+        }
+
+        [Test]
+        public void GetMoveDirection_InputEqualsNegativeThreshold_ReturnsZero()
+        {
+            Vector2 input = new Vector2(-0.5f, -0.5f);
+            Vector2Int result = _inputHandler.GetMoveDirection(input);
+            Assert.AreEqual(Vector2Int.zero, result);
+        }
     }
 }

@@ -25,6 +25,9 @@ namespace Game
 
         public void TriggerGameOver()
         {
+            if (_model.IsGameOver)
+                return;
+
             _model.EndGame();
             _view.ShowGameOver();
         }

@@ -7,7 +7,12 @@ namespace Tests.Mocks
     {
         public UnityEvent OnGameOverTriggered { get; } = new UnityEvent();
         public bool WasReset { get; private set; }
+        public int ResetCount { get; private set; }
 
-        public void ResetPlayer() => WasReset = true;
+        public void ResetPlayer()
+        {
+            WasReset = true;
+            ResetCount++;
+        }
     }
 }

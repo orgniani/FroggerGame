@@ -7,9 +7,18 @@ namespace Tests.Mocks
     {
         public bool GameOverShown { get; private set; }
         public bool GameOverHidden { get; private set; }
+        public int TimesGameOverShown { get; private set; }
         public UnityEvent OnRestartButtonClicked { get; } = new UnityEvent();
 
-        public void ShowGameOver() => GameOverShown = true;
-        public void HideGameOver() => GameOverHidden = true;
+        public void ShowGameOver()
+        {
+            GameOverShown = true;
+            TimesGameOverShown++;
+        }
+
+        public void HideGameOver()
+        {
+            GameOverHidden = true;
+        }
     }
 }
