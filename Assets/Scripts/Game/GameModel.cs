@@ -4,7 +4,13 @@ namespace Game
 {
     public class GameModel
     {
-        public bool IsGameOver { get; private set; }
+        public bool HasStarted { get; private set; } = false;
+        public bool IsGameOver { get; private set; } = false;
+
+        public void StartGame()
+        {
+            HasStarted = true;
+        }
 
         public void EndGame()
         {

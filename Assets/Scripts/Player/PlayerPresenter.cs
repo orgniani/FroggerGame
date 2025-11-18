@@ -15,6 +15,7 @@ namespace Player
         private readonly IInputManager _inputManager;
         private readonly PlayerInputHandler _inputHandler;
 
+        private bool _canMove;
         private bool _isGameOver;
         public UnityEvent OnGameOverTriggered { get; } = new UnityEvent();
 
@@ -32,9 +33,19 @@ namespace Player
             _view.OnObstacleHit?.AddListener(HandleObstacleHit);
         }
 
+        public void BlockMovement()
+        {
+            _canMove = false;
+        }
+
+        public void AllowMovement()
+        {
+            _canMove = true;
+        }
+
         private void HandleMoveInput(Vector2 moveInput)
         {
-            if (_isGameOver) return;
+            if (_isGameOver || !_canMove) return;
 
             Vector2Int moveDir = _inputHandler.GetMoveDirection(moveInput);
 

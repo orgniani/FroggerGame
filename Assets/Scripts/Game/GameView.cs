@@ -8,11 +8,16 @@ namespace Game
 {
     public class GameView : MonoBehaviour, IGameView
     {
-        [Header("Buttons")]
+        [Header("Screens")]
+        [SerializeField] private GameObject mainMenuScreen;
         [SerializeField] private GameObject gameOverScreen;
+
+        [Header("Buttons")]
+        [SerializeField] private Button playButton;
         [SerializeField] private Button restartButton;
 
         public UnityEvent OnRestartButtonClicked { get; } = new UnityEvent();
+        public UnityEvent OnPlayButtonClicked { get; } = new UnityEvent();
 
         private void Awake()
         {
@@ -21,8 +26,21 @@ namespace Game
 
         private void Start()
         {
+            ShowMainMenu();
             HideGameOver();
+
+            playButton.onClick.AddListener(() => OnPlayButtonClicked?.Invoke());
             restartButton.onClick.AddListener(() => OnRestartButtonClicked?.Invoke());
+        }
+
+        private void ShowMainMenu()
+        {
+            mainMenuScreen.SetActive(true);
+        }
+
+        public void HideMainMenu()
+        {
+            mainMenuScreen.SetActive(false);
         }
 
         public void ShowGameOver()
@@ -42,7 +60,9 @@ namespace Game
                 return;
 #endif
 
+            ReferenceValidator.Validate(mainMenuScreen, nameof(mainMenuScreen), this);
             ReferenceValidator.Validate(gameOverScreen, nameof(gameOverScreen), this);
+            ReferenceValidator.Validate(playButton, nameof(playButton), this);
             ReferenceValidator.Validate(restartButton, nameof(restartButton), this);
         }
     }

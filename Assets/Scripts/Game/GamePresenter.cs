@@ -9,18 +9,25 @@ namespace Game
 
         private IPlayerPresenter _playerPresenter;
 
-        public bool IsGameOver => _model.IsGameOver;
-
         public GamePresenter(GameModel model, IGameView view, IPlayerPresenter playerPresenter)
         {
             _model = model;
             _view = view;
 
             _playerPresenter = playerPresenter;
+            _playerPresenter.BlockMovement();
             _playerPresenter.OnGameOverTriggered.AddListener(TriggerGameOver);
 
             _view.HideGameOver();
             _view.OnRestartButtonClicked.AddListener(ResetGame);
+            _view.OnPlayButtonClicked.AddListener(StartGame);
+        }
+
+        private void StartGame()
+        {
+            _model.StartGame();
+            _view.HideMainMenu();
+            _playerPresenter.AllowMovement();
         }
 
         public void TriggerGameOver()
