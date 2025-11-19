@@ -18,6 +18,9 @@ namespace Player
         private bool _canMove;
         private bool _isGameOver;
         public UnityEvent OnGameOverTriggered { get; } = new UnityEvent();
+        public UnityEvent<bool> OnGameFinished { get; } = new UnityEvent<bool>();
+        public UnityEvent OnJump { get; } = new UnityEvent();
+        public UnityEvent OnHit { get; } = new UnityEvent();
 
         public PlayerPresenter(PlayerModel model, IPlayerView view, HealthModel healthModel, IInputManager inputManager, float inputThreshold)
 
@@ -60,7 +63,14 @@ namespace Player
             _view.SetFacingDirection(xDir);
 
             if (_model.HasReachedGoal)
+            {
                 TriggerGameOver();
+                OnGameFinished?.Invoke(true);
+
+            }
+
+            else
+                OnJump?.Invoke();
         }
 
         private void ResetPlayerPosition()
@@ -87,9 +97,11 @@ namespace Player
             if (_healthModel.IsDepleted)
             {
                 TriggerGameOver();
+                OnGameFinished?.Invoke(false);
                 return;
             }
 
+            OnHit?.Invoke();
             ResetPlayerPosition();
         }
 

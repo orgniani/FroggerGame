@@ -8,7 +8,8 @@
         "Orgniani.Input.Runtime",
         "Orgniani.Health.Runtime",
         "Orgniani.Config.Runtime",
-        "Orgniani.Interfaces.Runtime"
+        "Orgniani.Interfaces.Runtime",
+        "Orgniani.Audio.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
