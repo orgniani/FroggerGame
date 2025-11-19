@@ -13,7 +13,9 @@
         "Orgniani.Config.Runtime",
         "Orgniani.Lane.Runtime",
         "Orgniani.Health.Runtime",
-        "Orgniani.Interfaces.Runtime"
+        "Orgniani.Interfaces.Runtime",
+        "Orgniani.Audio.Runtime",
+        "Mocks"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

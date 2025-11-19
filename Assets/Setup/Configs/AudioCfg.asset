@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d923b25c0bafebe45a72c1abcddc4f32, type: 3}
   m_Name: AudioCfg
   m_EditorClassIdentifier: 
-  musicClip: {fileID: 8300000, guid: 1ba11a2f31692f04ba0c025d22f1441c, type: 3}
-  soundHit: {fileID: 8300000, guid: e47c630fc5307934391e52f216ce53ec, type: 3}
-  soundJump: {fileID: 8300000, guid: 18494ee3f875ce14ea3048c1032704ec, type: 3}
-  soundButton: {fileID: 8300000, guid: c9de8a2638dbd3a49bd303809eb225f8, type: 3}
-  soundGameOver: {fileID: 8300000, guid: c2c58cd4b5f8e7244bbfe376cd14169e, type: 3}
-  soundGameWin: {fileID: 8300000, guid: b4b703a097da10e4695b047e3f755ad7, type: 3}
+  <MusicClip>k__BackingField: {fileID: 8300000, guid: 1ba11a2f31692f04ba0c025d22f1441c, type: 3}
+  <SoundHit>k__BackingField: {fileID: 8300000, guid: e47c630fc5307934391e52f216ce53ec, type: 3}
+  <SoundJump>k__BackingField: {fileID: 8300000, guid: 18494ee3f875ce14ea3048c1032704ec, type: 3}
+  <SoundButton>k__BackingField: {fileID: 8300000, guid: c9de8a2638dbd3a49bd303809eb225f8, type: 3}
+  <SoundGameOver>k__BackingField: {fileID: 8300000, guid: c2c58cd4b5f8e7244bbfe376cd14169e, type: 3}
+  <SoundGameWin>k__BackingField: {fileID: 8300000, guid: b4b703a097da10e4695b047e3f755ad7, type: 3}

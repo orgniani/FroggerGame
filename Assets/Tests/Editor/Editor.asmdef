@@ -11,6 +11,7 @@
         "Orgniani.Lane.Runtime",
         "Orgniani.Obstacle.Runtime",
         "Orgniani.Config.Runtime",
+        "Orgniani.Audio.Runtime",
         "Mocks"
     ],
     "includePlatforms": [
