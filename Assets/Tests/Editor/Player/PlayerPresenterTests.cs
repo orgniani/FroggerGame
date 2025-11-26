@@ -34,8 +34,8 @@ namespace Tests.Editor.Player
         [Test]
         public void HandleMoveInput_UpdatesModelAndView()
         {
+            _presenter.AllowMovement();
             _mockInput.SimulateInput(Vector2.up);
-
             Assert.AreEqual(1f, _model.CurrentY);
             Assert.AreEqual(1f, _mockView.LastY);
         }
@@ -43,31 +43,99 @@ namespace Tests.Editor.Player
         [Test]
         public void HandleMoveInput_SetsFacingDirection()
         {
+            _presenter.AllowMovement();
             _mockInput.SimulateInput(Vector2.left);
-
             Assert.AreEqual(-1, _mockView.LastFacing);
+        }
+
+        [Test]
+        public void HandleMoveInput_InvokesJumpEvent()
+        {
+            _presenter.AllowMovement();
+            bool jumped = false;
+            _presenter.OnJump.AddListener(() => jumped = true);
+            _mockInput.SimulateInput(Vector2.right);
+            Assert.IsTrue(jumped);
+        }
+
+        [Test]
+        public void HandleMoveInput_DoesNotMove_WhenMovementBlocked()
+        {
+            _presenter.BlockMovement();
+            _mockInput.SimulateInput(Vector2.up);
+            Assert.AreEqual(0f, _model.CurrentY);
+            Assert.AreEqual(0f, _mockView.LastY);
         }
 
         [Test]
         public void ObstacleHit_ReducesHealth()
         {
+            int before = _health.CurrentLives;
             _mockView.OnObstacleHit.Invoke();
+            Assert.AreEqual(before - 1, _health.CurrentLives);
+        }
 
-            Assert.AreEqual(_config.MaxLives - 1, _health.CurrentLives);
+        [Test]
+        public void ObstacleHit_InvokesOnHit_WhenNotDead()
+        {
+            bool hit = false;
+            _presenter.OnHit.AddListener(() => hit = true);
+            _mockView.OnObstacleHit.Invoke();
+            Assert.IsTrue(hit);
         }
 
         [Test]
         public void ObstacleHit_TriggersGameOverAtZeroHealth()
         {
             _health.TakeDamage(_config.MaxLives - 1);
-
             bool triggered = false;
             _presenter.OnGameOverTriggered.AddListener(() => triggered = true);
-
             _mockView.OnObstacleHit.Invoke();
-
             Assert.IsTrue(triggered);
             Assert.IsTrue(_mockView.PlayedDead);
+        }
+
+        [Test]
+        public void ObstacleHit_DoesNotReduceHealth_WhenGameOver()
+        {
+            for (int i = 0; i < _config.MaxLives; i++)
+                _mockView.OnObstacleHit.Invoke();
+
+            int before = _health.CurrentLives;
+            _mockView.OnObstacleHit.Invoke();
+            Assert.AreEqual(before, _health.CurrentLives);
+        }
+
+        [Test]
+        public void ObstacleHit_Death_InvokesGameFinishedFalse()
+        {
+            bool result = true;
+            _presenter.OnGameFinished.AddListener(v => result = v);
+            for (int i = 0; i < _config.MaxLives; i++)
+                _mockView.OnObstacleHit.Invoke();
+            Assert.IsFalse(result);
+        }
+
+        [Test]
+        public void MoveToGoal_TriggersGameOver()
+        {
+            _presenter.AllowMovement();
+            bool triggered = false;
+            _presenter.OnGameOverTriggered.AddListener(() => triggered = true);
+            while (!_model.HasReachedGoal)
+                _mockInput.SimulateInput(Vector2.up);
+            Assert.IsTrue(triggered);
+        }
+
+        [Test]
+        public void MoveToGoal_InvokesGameFinishedTrue()
+        {
+            _presenter.AllowMovement();
+            bool result = false;
+            _presenter.OnGameFinished.AddListener(v => result = v);
+            while (!_model.HasReachedGoal)
+                _mockInput.SimulateInput(Vector2.up);
+            Assert.IsTrue(result);
         }
 
         [Test]
@@ -75,7 +143,6 @@ namespace Tests.Editor.Player
         {
             _health.TakeDamage(1);
             _presenter.ResetPlayer();
-
             Assert.AreEqual(_health.MaxLives, _health.CurrentLives);
             Assert.AreEqual(0f, _model.CurrentX);
             Assert.AreEqual(0f, _model.CurrentY);
@@ -84,55 +151,26 @@ namespace Tests.Editor.Player
         }
 
         [Test]
-        public void HandleMoveInput_DoesNotMove_WhenGameOver()
-        {
-            _health.TakeDamage(_config.MaxLives);
-            _mockView.OnObstacleHit.Invoke();
-
-            _mockInput.SimulateInput(Vector2.up);
-
-            Assert.AreEqual(0f, _model.CurrentY);
-            Assert.AreEqual(0f, _mockView.LastY);
-        }
-
-        [Test]
-        public void ObstacleHit_DoesNotReduceHealth_WhenGameOver()
-        {
-            _health.TakeDamage(_config.MaxLives);
-            _mockView.OnObstacleHit.Invoke();
-
-            int livesBefore = _health.CurrentLives;
-            _mockView.OnObstacleHit.Invoke();
-
-            Assert.AreEqual(livesBefore, _health.CurrentLives);
-        }
-
-        [Test]
-        public void MoveToGoal_TriggersGameOver()
-        {
-            bool triggered = false;
-            _presenter.OnGameOverTriggered.AddListener(() => triggered = true);
-
-            _mockInput.SimulateInput(Vector2.up);
-
-            while (!_model.HasReachedGoal)
-            {
-                _mockInput.SimulateInput(Vector2.up);
-            }
-
-            Assert.IsTrue(triggered);
-        }
-
-        [Test]
         public void ResetPlayer_ClearsGameOverFlag()
         {
-            _health.TakeDamage(_config.MaxLives);
-            _mockView.OnObstacleHit.Invoke();
+            for (int i = 0; i < _config.MaxLives; i++)
+                _mockView.OnObstacleHit.Invoke();
 
             _presenter.ResetPlayer();
+            _presenter.AllowMovement();
             _mockInput.SimulateInput(Vector2.up);
-
             Assert.AreEqual(1f, _model.CurrentY);
+        }
+
+        [Test]
+        public void HandleMoveInput_DoesNotMove_WhenGameOver()
+        {
+            for (int i = 0; i < _config.MaxLives; i++)
+                _mockView.OnObstacleHit.Invoke();
+
+            _mockInput.SimulateInput(Vector2.up);
+            Assert.AreEqual(0f, _model.CurrentY);
+            Assert.AreEqual(0f, _mockView.LastY);
         }
     }
 }

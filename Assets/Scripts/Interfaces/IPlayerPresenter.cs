@@ -8,5 +8,7 @@ namespace Interfaces
         UnityEvent OnGameOverTriggered { get; }
 
         void ResetPlayer();
+        void AllowMovement();
+        void BlockMovement();
     }
 }

@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <LaneWidth>k__BackingField: 1
   <LaneHeight>k__BackingField: 1
-  <MaxY>k__BackingField: 4.5
-  <MinX>k__BackingField: -8.5
-  <MaxX>k__BackingField: 8.5
+  <TopBoundary>k__BackingField: 4.5
+  <BottomBoundary>k__BackingField: -2.5
+  <LeftBoundary>k__BackingField: -8
+  <RightBoundary>k__BackingField: 8
   <MaxLives>k__BackingField: 3
+  <InputThreshold>k__BackingField: 0.5
